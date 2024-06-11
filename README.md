@@ -1,39 +1,20 @@
-
-
 <div align="center">
 <!-- <img src="logo.png" height="90px" width="auto" />  -->
-<h2>
-    <em>Résumé</em> minimalista maquetado para web y pdf
-</h2>
-<p>
-Esquema del JSON de CV de <a href="https://jsonresume.org/schema/">jsonresume.org</a>
-</p>
-
-
-<p>
-Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a>
-
-</p>
-
+<h2><em>Minimalist</em> Resume Template for Web and PDF</h2>
+<p>CV JSON schema from <a href="https://jsonresume.org/schema/">jsonresume.org</a></p>
+<p>Based on the design by <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a></p>
 </div>
 
 <div align="center">
-    <a href="#🚀-empezar">
-        Empezar
-    </a>
+    <a href="#🚀-getting-started">Getting Started</a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#🧞-comandos">
-        Comandos
-    </a>
+    <a href="#🧞-commands">Commands</a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#🔑-licencia">
-        Licencia
-    </a>
+    <a href="#🔑-license">License</a>
     <span>&nbsp;✦&nbsp;</span>
     <a href="https://midu.dev">
         Personal
     </a>
-   
 </div>
 
 <p></p>
@@ -41,64 +22,59 @@ Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz J
 <div align="center">
 
 ![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
-![GitHub stars](https://img.shields.io/github/stars/midudev/minimalist-portfolio-json)
-![GitHub issues](https://img.shields.io/github/issues/midudev/minimalist-portfolio-json)
-![GitHub forks](https://img.shields.io/github/forks/midudev/minimalist-portfolio-json)
-![GitHub PRs](https://img.shields.io/github/issues-pr/midudev/minimalist-portfolio-json)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
+![GitHub stars](https://img.shields.io/github/stars/Smilesharks/dev-portfolio)
+![GitHub issues](https://img.shields.io/github/issues/Smilesharks/dev-portfolio)
+![GitHub forks](https://img.shields.io/github/forks/Smilesharks/dev-portfolio)
+![GitHub PRs](https://img.shields.io/github/issues-pr/Smilesharks/dev-portfolio)
 
 </div>
 
-<img src="portada.png"></img>
+<!-- <img src="portada.png"></img>  -->
 
 ## 🛠️ Stack
 
-- [**Astro**](https://astro.build/) - El framework web de la nueva época.
-- [**Typescript**](https://www.typescriptlang.org/) - JavaScript con sintaxis de tipado.
-- [**Ninja Keys**](https://github.com/ssleptsov/ninja-keys) - Menu desplegable con atajos de teclado hecho en puro Javascript.
+- [**Astro**](https://astro.build/) - The next-gen web framework.
+- [**Typescript**](https://www.typescriptlang.org/) - JavaScript with type syntax.
+- [**Ninja Keys**](https://github.com/ssleptsov/ninja-keys) - Dropdown menu with keyboard shortcuts made in pure JavaScript.
 
+## 🚀 Getting Started
 
-## 🚀 Empezar
+### 1. Use this [repo](https://github.com/midudev/minimalist-portfolio-json) as an Astro project template
 
-### 1. Usa este [repo](https://github.com/midudev/minimalist-portfolio-json) como _template_ de un proyecto de Astro
-
-
-- Yo uso [pnpm](https://pnpm.io/installation) como gestor de dependencias y empaquetador.
+- I use [pnpm](https://pnpm.io/installation) as my package manager.
 
 ```bash
-# Activa pnpm en MacOS, WSL & Linux:
+# Enable pnpm on MacOS, WSL & Linux:
 corepack enable
 corepack prepare pnpm@latest --activate
 
-# Inicializa el proyecto
+# Initialize the project
 pnpm create astro@latest -- --template midudev/minimalist-portfolio-json
+
 ```
 
-### 2. Añade tu contenido:
-Edita el archivo `cv.json` para crear tu propio Portafolio/CV imprimible.
-### 3. Lanza el servidor de desarrollo:
+### 2. Add Your Content:
+
+Edit the `cv.json` file to create your own printable Portfolio/CV.
+
+### 3. Launch the Development Server:
 
 ```bash
-# Disfruta del resultado
+# Enjoy the results
 pnpm dev
 ```
 
+1. Open [**http://localhost:4321**](http://localhost:4321/) in your browser to view the result 🚀
 
-1. Abre [**http://localhost:4321**](http://localhost:4321/) en tu navegador para ver el resultado 🚀
+## 🧞 Commands
 
+|     | Command         | Action                                                                       |
+| :-- | :-------------- | :--------------------------------------------------------------------------- |
+| ⚙️  | `dev` o `start` | Launches a local development server at `localhost:4321`.                   |
+| ⚙️  | `build`         | Checks for errors and creates a production build in `./dist/`. |
+| ⚙️  | `preview`       | Local preview at `localhost:4321`                                       |
 
-## 🧞 Comandos
+## 🔑 License
 
-|     | Comando          | Acción                                        |
-| :-- | :--------------- | :-------------------------------------------- |
-| ⚙️  | `dev` o `start` | Lanza un servidor de desarrollo local en  `localhost:4321`.  |
-| ⚙️  | `build`          | Comprueba posibles errores y hace un empaquetado de producción en `./dist/`.      |
-| ⚙️  | `preview`        | Vista previa en local `localhost:4321` |
-
-
-
-## 🔑 Licencia
-
-[MIT](LICENSE.txt) - Creado por [**midudev**](https://midu.dev).
-
-
-
+[MIT](LICENSE.txt) - Created by [**midudev**](https://midu.dev).
