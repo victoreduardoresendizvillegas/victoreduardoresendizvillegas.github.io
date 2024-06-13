@@ -44,7 +44,7 @@ const SKILLS_ICONS: Record<string, any> = {
         const Icon = SKILLS_ICONS[iconName]
 
         return (
-          <li>
+          <li class="text-amber-500 bg-amber-500/10 flex gap-1 items-center rounded-full px-3 py-1 text-xs font-medium leading-5">
             {Icon && <Icon />} <span>{name}</span>
           </li>
         )
@@ -58,17 +58,5 @@ const SKILLS_ICONS: Record<string, any> = {
     display: inline-flex;
     gap: 8px;
     flex-wrap: wrap;
-  }
-
-  li {
-    align-items: center;
-    background: #eee;
-    border-radius: 6px;
-    color: black;
-    display: flex;
-    font-size: 0.8rem;
-    font-weight: 500;
-    gap: 4px;
-    padding: 0.2rem 0.6rem;
   }
 </style>

@@ -1,129 +1,131 @@
 ---
 import Section from "../Section.astro"
-
 import { work } from "@cv"
+
+import HTML from "@/icons/html.astro"
+import CSS from "@/icons/css.astro"
+import JavaScript from "@/icons/javascript.astro"
+import TypeScript from "@/icons/type.astro"
+import React from "@/icons/react.astro"
+import Node from "@/icons/node.astro"
+import MySQL from "@/icons/sql.astro"
+import Git from "@/icons/git.astro"
+import GitHub from "@/icons/GitHub.astro"
+import Tailwind from "@/icons/tailwind.astro"
+import Next from "@/icons/next.astro"
+import Swift from "@/icons/swift.astro"
+import SwiftUI from "@/icons/swiftui.astro"
+import Kotlin from "@/icons/kotlin.astro"
+import Flutter from "@/icons/flutter.astro"
+
+const SKILLS_ICONS: Record<string, any> = {
+  HTML,
+  CSS,
+  JavaScript,
+  TypeScript,
+  React,
+  Node,
+  MySQL,
+  Git,
+  GitHub,
+  Next,
+  Tailwind,
+  Swift,
+  SwiftUI,
+  Kotlin,
+  Flutter,
+}
 ---
 
 <Section title="Experience">
-  <ul>
-    {
-      work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear()
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Present"
+  <ul class="flex flex-col">
+    {work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type }) => {
+      const startYear = new Date(startDate).getFullYear()
+      const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present"
 
-          return (
-            <li>
-              <article>
-                <header>
-                  <div>
-                    <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
-                        {name}
-                      </a>
-                    </h3>
-                    <h4>{position}</h4>
+      return (
+        <li class="relative py-6 before:w-px before:absolute before:bg-gray-200 before:h-full before:mt-2">
+          <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white"></div>
+          <div class="group relative grid ml-4 pb-1 transition-all sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <header class="mt-1.5 text-xs font-semibold sm:col-span-2" aria-label="">
+              <time datetime={startDate} data-title={startDate}>{startYear}</time> - <time datetime={endDate} data-title={endDate}>{endYear}</time>
+            </header>
+            <div class="flex flex-col sm:col-span-10">
+              <h3>
+                <div class="group/link focus-visible:text-amber-500 inline-flex items-center text-lg font-bold leading-tight" aria-label="{position} - {company}">
+                  <span>{position} <span>@</span> 
+                  {url ? (
+                    <a href={url} title={`Ver ${name}`} target="_blank">{name}</a>
+                  ) : (
+                    <span>{name}</span>
+                  )}
+                  {url &&
+                    <span class="inline-block">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+                      </svg>
+                    </span>
+                  }
+                  </span>
+                </div>
+              </h3>
+              {(location || location_type) && (
+                <div class="text-base-content/60 text-xs">
+                  {location} {location && location_type && '-'} {location_type}
+                </div>
+              )}
+              <div class="[&>*>h4]:font-bold mt-4 flex flex-col gap-4 text-sm">
+                {summary && (
+                  <div class="flex flex-col gap-1">
+                    <h4>Summary:</h4>
+                    <ul class="decoration-amber-500 [&>li]:text-base-content/60 [&>li]:ml-4 flex list-disc flex-col gap-2">
+                      {Array.isArray(summary) ? (
+                        summary.map(item => (
+                          <li>{item}</li>
+                        ))
+                      ) : (
+                        <li>{summary}</li>
+                      )}
+                    </ul>
                   </div>
+                )}
 
-                  <div>
-                    <time 
-                      datetime={startDate}
-                      data-title={startDate}>
-                        {startYear}
-                    </time>
-                    {" - "}
-                    <time 
-                      datetime={endDate}
-                      data-title={endDate}>
-                        {endYear}
-                    </time>
+                {responsibilities && (
+                  <div class="flex flex-col gap-1">
+                    <h4>Responsibilities:</h4>
+                    <ul class="decoration-amber-500 [&>li]:text-base-content/60 [&>li]:ml-4 flex list-disc flex-col gap-2">
+                      {responsibilities.map(responsibility => (
+                        <li>{responsibility}</li>
+                      ))}
+                    </ul>
                   </div>
-                </header>
-
-                <footer>
-                  <p>{summary}</p>
-                </footer>
-              </article>
-            </li>
-          )
-        }
+                )}
+                {achievements && (
+                  <div class="flex flex-col gap-1">
+                    <h4>Achievements:</h4>
+                    <ul class="decoration-amber-500 [&>li]:text-base-content/60 [&>li]:ml-4 flex list-disc flex-col gap-2">
+                      {achievements.map(achievement => (
+                        <li>{achievement}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                <ul class="flex flex-wrap gap-2" aria-label="Technologies used">
+                  {skills && skills.map(skill => {
+                    const iconName = skill === "Next.js" ? "Next" : skill
+                    const Icon = SKILLS_ICONS[iconName]
+                    return (
+                      <li class="text-amber-500 bg-amber-500/10 flex gap-1 items-center rounded-full px-3 py-1 text-xs font-medium leading-5">
+                        {Icon && <Icon />} <span>{skill}</span>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            </div>
+        </div>
+        </li>
       )
-    }
+    })}
   </ul>
 </Section>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  article a {
-    color: #111;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #222;
-    font-weight: 400;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-    cursor: default;
-  }
-
-  [data-title]:hover:after {
-    opacity: 1;
-    transition: all 0.1s ease-in-out 0.5s;
-    visibility: visible;
-  }
-
-  [data-title]:after {
-    content: attr(data-title);
-    background-color: #333;
-    color: #fff;
-    font-size: .75rem;
-    font-family: Menlo, Monaco, Lucida Console, "Courier New", monospace;;
-    position: absolute;
-    padding: .2rem .5rem;
-    bottom: -1.4rem;
-    left: 50%;
-    white-space: nowrap;
-    box-shadow: 1px 1px 1px #222222;
-    opacity: 0;
-    border: 1px solid #111111;
-    z-index: 99999;
-    visibility: hidden;
-    border-radius: 6px;
-  }
-
-  [data-title] {
-    position: relative;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-  }
-</style>

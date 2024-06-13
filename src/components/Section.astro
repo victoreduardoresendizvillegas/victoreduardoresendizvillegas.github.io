@@ -1,16 +1,17 @@
 ---
-// se ejecuta en el servidor o en build time <----
 const { title } = Astro.props
 ---
 
-<section>
-  {title && <h2>{title}</h2>}
+<section class="flex flex-col gap-6">
+  
+  {title &&
+    <div class="w-full text-3xl before:font-mon before:text-xl relative font-bold before:relative items-center flex gap-3 before:text-accent before:content-['0.1'] after:content-[''] after:block after:w-24 after:h-px after:bg-gray-500/10 after:mt-2 after:ml-3">
+      {title}
+    </div>
+  }
   <slot />
 </section>
 
-<script>
-  // se ejecuta en el cliente <----
-</script>
 
 <style>
   section {
