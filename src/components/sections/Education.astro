@@ -5,7 +5,7 @@ import { education } from "@cv"
 ---
 
 <Section title="Education">
-  <ul>
+  <ul class="space-y-4 print:space-y-0 py-3">
     {
       education.map(({ institution, startDate, endDate, area }) => {
         const startYear = new Date(startDate).getFullYear()
@@ -14,55 +14,23 @@ import { education } from "@cv"
         const years = `${startYear} - ${endYear}`
 
         return (
-          <li>
-            <article>
-              <header>
-                <div>
-                  <h3>{institution}</h3>
-                </div>
-
-                <time>{years}</time>
-              </header>
-
-              <footer>
-                <p>{area}</p>
-              </footer>
-            </article>
-          </li>
+        <div class="flex items-baseline">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 hidden h-5 w-5 self-start text-gray-400 md:inline-block dark:text-gray-600">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"></path>
+          </svg>
+          <div class="relative w-full items-baseline justify-between gap-2">
+            <h3 class="mr-6 items-baseline gap-x-2 gap-y-0.5 font-medium text-gray-800">
+              <a href="https://aaronfrancis.com/2024/what-if-you-tried-hard-dac139a5">{institution}</a>
+            </h3>
+            <div class="text-sm text-gray-500">{area}</div>
+            <time class="right-0 md:absolute text-xs md:block top-0">{years}</time>
+          </div>
+        </div>
         )
       })
     }
   </ul>
+
+  
+  
 </Section>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-  }
-</style>

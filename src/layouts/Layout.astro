@@ -39,18 +39,6 @@ const { image, summary, url } = basics
 </html>
 
 <style is:global>
-  /* html {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      "Courier New",
-      Courier,
-      monospace;
-    background: #fff;
-    letter-spacing: -0.025rem;
-  } */
-
   body,
   figure {
     margin: 0;
@@ -102,6 +90,10 @@ const { image, summary, url } = basics
 
   .print {
     display: none !important;
+  }
+
+  .dev * {
+    @apply border border-red-500/50 bg-red-500/5 ;
   }
 
   @media print {

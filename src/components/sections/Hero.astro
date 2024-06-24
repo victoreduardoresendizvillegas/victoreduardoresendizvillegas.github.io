@@ -25,7 +25,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
 ---
 
 <Section>
-  <div class="container">
+  <div class="flex flex-col-reverse gap-8">
     <div class="info">
       <h1>{name}</h1>
       <h2>{label}</h2>
@@ -36,7 +36,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
       <footer class="print">
         {printInfo}
       </footer>
-      <footer class="no-print">
+      <footer class="no-print ">
         {
           email && (
             <a
@@ -79,79 +79,39 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
         }
       </footer>
     </div>
-    <figure>
+    <figure class=" print:hidden ">
       <img src={image} alt={name} />
     </figure>
   </div>
 </Section>
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
   .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-right: 32px;
+    @apply flex flex-col gap-2 print:pr-0 print:gap-0 pr-8;
   }
 
   h1 {
-    font-size: 2rem;
+    @apply text-4xl print:text-3xl font-bold;
   }
 
   h2 {
-    color: #444;
-    font-weight: 500;
-    font-size: 1.1rem;
-    text-wrap: balance;
+    @apply text-zinc-700 text-xl print:text-lg font-medium text-balance;
   }
 
   img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    width: 128px;
-    border-radius: 16px;
+    @apply aspect-square bg-cover w-32 rounded-2xl
   }
 
   span {
-    color: #666;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.85rem;
-    letter-spacing: -0.05rem;
+    @apply text-zinc-700 tracking-wider flex items-center gap-1 text-sm;
   }
 
   footer {
-    color: #555;
-    font-size: 0.65rem;
-    display: flex;
-    gap: 4px;
-    margin-top: 8px;
+    @apply text-zinc-500 flex gap-1 mt-2 text-sm ;
   }
 
   footer a {
-    color: #777;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #eee;
-    padding: 4px;
-    height: 32px;
-    width: 32px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-  }
-
-  footer a:hover {
-    background: #eee;
-    border: 1px solid #ddd;
+    @apply text-zinc-700 inline-flex items-center justify-center border border-zinc-200 p-1 size-8 rounded-md transition-all duration-500 ease-linear hover:border-zinc-300 hover:bg-zinc-200;
   }
 
   @media (width <= 700px) {

@@ -44,10 +44,10 @@ const SKILLS_ICONS: Record<string, any> = {
       const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present"
 
       return (
-        <li class="relative py-6 before:w-px before:absolute before:bg-gray-200 before:h-full before:mt-2">
+        <li class="relative py-4 print:py-2 before:w-px before:absolute before:bg-gray-200 before:h-full before:mt-2">
           <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white"></div>
           <div class="group relative grid ml-4 pb-1 transition-all sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-            <header class="mt-1.5 text-xs font-semibold sm:col-span-2" aria-label="">
+            <header class="mt-1.5 text-xs relative font-semibold sm:col-span-2" aria-label="">
               <time datetime={startDate} data-title={startDate}>{startYear}</time> - <time datetime={endDate} data-title={endDate}>{endYear}</time>
             </header>
             <div class="flex flex-col sm:col-span-10">
@@ -60,7 +60,7 @@ const SKILLS_ICONS: Record<string, any> = {
                     <span>{name}</span>
                   )}
                   {url &&
-                    <span class="inline-block">
+                    <span class="inline-block print:[&>svg]:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" aria-hidden="true">
                         <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
                       </svg>
@@ -74,7 +74,7 @@ const SKILLS_ICONS: Record<string, any> = {
                   {location} {location && location_type && '-'} {location_type}
                 </div>
               )}
-              <div class="[&>*>h4]:font-bold mt-4 flex flex-col gap-4 text-sm">
+              <div class="[&>*>h4]:font-bold mt-4  print:gap-0 flex flex-col gap-4 text-sm">
                 {summary && (
                   <div class="flex flex-col gap-1">
                     <h4>Summary:</h4>
@@ -115,7 +115,7 @@ const SKILLS_ICONS: Record<string, any> = {
                     const iconName = skill === "Next.js" ? "Next" : skill
                     const Icon = SKILLS_ICONS[iconName]
                     return (
-                      <li class="text-amber-500 bg-amber-500/10 flex gap-1 items-center rounded-full px-3 py-1 text-xs font-medium leading-5">
+                      <li class="text-amber-500 print:p-0 print:bg-transparent print:text-zinc-800 bg-amber-500/10 flex gap-1 items-center rounded-full px-3 py-1 text-xs font-medium leading-5">
                         {Icon && <Icon />} <span>{skill}</span>
                       </li>
                     )
@@ -127,5 +127,7 @@ const SKILLS_ICONS: Record<string, any> = {
         </li>
       )
     })}
-  </ul>
+  </ul>  
 </Section>
+<!-- 
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> -->

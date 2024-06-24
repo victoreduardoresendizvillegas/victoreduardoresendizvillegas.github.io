@@ -7,6 +7,7 @@ import Experience from "@/components/sections/Experience.astro"
 import Hero from "@/components/sections/Hero.astro"
 import Projects from "@/components/sections/Projects.astro"
 import Skills from "@/components/sections/Skills.astro"
+import Tail from "@/components/sections/Tail.astro"
 import KeyboardManager from "@/components/KeyboardManager.astro"
 
 import { basics } from "@cv"
@@ -14,19 +15,25 @@ const { name, label } = basics
 ---
 
 <Layout title={`Portafolio de ${name} - ${label}`}>
-  <main>
-    <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Projects />
-    <Skills />
+  <main class="grid desv max-w-7xl print:max-w-none print:grid-cols-1 grid-cols-6 gap-8">
+    <div class="col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 ">
+      <Hero />
+      <About />
+    </div>
+    <div class="col-span-4 space-y-12 print:space-y-0 print:col-span-1">
+      <Experience />
+      <Education  />
+      <Projects />
+      <Skills />
+    </div>
+    <Tail />
   </main>
 
   <KeyboardManager />
 </Layout>
 
 <style>
+  @page { size: auto;  margin: 0mm; }
   main {
     padding: 4rem;
     margin: auto;

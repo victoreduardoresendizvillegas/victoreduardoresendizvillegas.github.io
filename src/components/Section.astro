@@ -2,10 +2,10 @@
 const { title } = Astro.props
 ---
 
-<section class="flex flex-col gap-6">
+<section class="flex flex-col print:gap-0 gap-4">
   
   {title &&
-    <div class="w-full text-3xl before:font-mon before:text-xl relative font-bold before:relative items-center flex gap-3 before:text-accent before:content-['0.1'] after:content-[''] after:block after:w-24 after:h-px after:bg-gray-500/10 after:mt-2 after:ml-3">
+    <div class="w-full text-3xl print:text-xl before:font-mono print:before:content-none before:text-xl relative font-bold before:relative items-center flex gap-3 print:after:gap-0 print:after:ml-0  after:content-[''] print:after:content-none after:block after:w-24 after:h-px after:bg-gray-500/10 after:mt-2 after:ml-3">
       {title}
     </div>
   }
@@ -14,10 +14,10 @@ const { title } = Astro.props
 
 
 <style>
-  section {
+  /* section {
     max-width: 700px;
     margin: 0 auto 48px;
-  }
+  } */
 
   h2 {
     margin-bottom: 8px;
