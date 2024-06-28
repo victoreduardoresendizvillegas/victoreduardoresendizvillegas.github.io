@@ -63,7 +63,7 @@
       "name": "Web Agency",
       "position": "Intern Web Developer",
       "location_type": "Remote",
-      "location": " ",
+      "location": "Sydney, Australia",
       "startDate": "2022-06-01",
       "endDate": "2022-12-01",
       "summary": "Assisted in developing client websites and applications. Gained hands-on experience with front-end and back-end technologies.",
@@ -261,7 +261,8 @@
         "Built with Node.js and MongoDB",
         "User authentication and CRUD operations"
       ],
-      "url": "https://taskmanager.com"
+      "url": "https://taskmanager.com",
+      "github": "https://taskmanager.com"
     },
     {
       "name": "E-commerce Site",

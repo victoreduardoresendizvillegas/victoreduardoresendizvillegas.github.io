@@ -62,7 +62,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
           )
         }
         {
-          profiles.map(({ network, url, username }) => {
+          profiles.map(({ network, url }) => {
             const Icon = SOCIAL_ICONS[network]
 
             return (
@@ -120,16 +120,18 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
     }
 
     .info {
-      justify-content: center;
-      align-items: center;
+      @apply md:justify-center md:items-center ;
+      /* justify-content: center; */
+      /* align-items: center; */
       padding-right: 0;
-      text-align: center;
+      /* text-align: center; */
     }
 
     figure {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @apply md:justify-center flex md:items-center ;
+      /* display: flex; */
+      /* justify-content: center; */
+      /* align-items: center; */
     }
 
     h2 {
@@ -137,7 +139,8 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
     }
 
     figure {
-      margin: 0 auto;
+      @apply md:mx-auto
+      /* margin: 0 auto; */
     }
   }
 </style>
