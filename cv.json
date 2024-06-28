@@ -60,6 +60,30 @@
       ]
     },
     {
+      "name": "Tech Startup",
+      "position": "Junior Web Developer",
+      "location_type": "On site",
+      "location": "Auckland, New Zealand",
+      "url": "https://techstartup.com",
+      "startDate": "2023-01-01",
+      "endDate": null,
+      "summary": "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.",
+      "highlights": [
+        "Improved website performance by optimizing code"
+      ],
+      "responsibilities": [
+        "Collaborated with senior developers to design and implement web applications using modern JavaScript frameworks.",
+        "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
+        "Participated in code reviews and contributed to improving coding standards within the team."
+      ],
+      "achievements": [
+        "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs."
+      ],
+      "skills": [
+        "React", "Tailwind", "GitHub"
+      ]
+    },
+    {
       "name": "Web Agency",
       "position": "Intern Web Developer",
       "location_type": "Remote",
