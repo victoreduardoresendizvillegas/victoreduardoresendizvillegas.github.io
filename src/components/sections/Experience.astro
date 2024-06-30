@@ -115,7 +115,7 @@ const SKILLS_ICONS: Record<string, any> = {
                 )}
                 </div>
                 
-                <button @click="expanded = ! expanded" class="print:hidden w-fit cursor-pointer items-center justify-center gap-1.5 text-xs text-zinc-500 transition-all hover:text-zinc-700 flex">
+                <button @click="expanded = ! expanded" class="print:hidden w-fit cursor-pointer items-center justify-center gap-1.5 text-xs underline text-zinc-500 transition-all hover:text-zinc-700 flex">
                   <span x-text="expanded ? 'Show less' : 'Show more'">Show more</span>
                   <svg class="w-4 h-4 duration-200 ease-out" :class="{ 'rotate-180': expanded }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>
@@ -126,7 +126,7 @@ const SKILLS_ICONS: Record<string, any> = {
                     const iconName = skill === "Next.js" ? "Next" : skill
                     const Icon = SKILLS_ICONS[iconName]
                     return (
-                      <li class="text-amber-500 print:p-0 print:bg-transparent print:text-zinc-800 bg-amber-50 flex gap-1 items-center border-solid print:border-none border border-amber-200 rounded-full px-3 py-1 text-xs font-medium leading-5">
+                      <li class="text-amber-500 print:p-0 print:bg-transparent print:text-zinc-800 bg-amber-50 flex gap-1 items-center border-solid print:border-none border border-amber-200 rounded-md px-2 py-0.5 text-xs font-medium">
                         {Icon && <Icon />} <span>{skill}</span>
                       </li>
                     )
