@@ -7,8 +7,8 @@
     "phone": "+1 555-555-5555",
     "url": "https://johndoe.dev",
     "summary": "Junior Full Stack Developer with a passion for building web applications. Currently seeking opportunities to further develop my skills in a professional setting. Based in Auckland, New Zealand.",
-    "dark-theme": "dark",
-    "light-theme": "light",
+    "dark_theme": "dark",
+    "light_theme": "light",
     "location": {
       "address": "",
       "postalCode": "10001",
@@ -41,7 +41,7 @@
       "location_type": "On site",
       "location": "Auckland, New Zealand",
       "url": "https://techstartup.com",
-      "startDate": "2023-01-01",
+      "startDate": "2024-01-01",
       "endDate": null,
       "summary": "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.",
       "highlights": [
@@ -66,7 +66,7 @@
       "location": "Auckland, New Zealand",
       "url": "https://techstartup.com",
       "startDate": "2023-01-01",
-      "endDate": null,
+      "endDate": "2024-01-01",
       "summary": "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.",
       "highlights": [
         "Improved website performance by optimizing code"
