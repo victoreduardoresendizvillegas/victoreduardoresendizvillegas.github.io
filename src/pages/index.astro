@@ -1,48 +1,51 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 
-import About from "@/components/sections/About.astro"
-import Education from "@/components/sections/Education.astro"
-import Experience from "@/components/sections/Experience.astro"
-import Hero from "@/components/sections/Hero.astro"
-import Projects from "@/components/sections/Projects.astro"
-import Skills from "@/components/sections/Skills.astro"
-import Tail from "@/components/sections/Tail.astro"
-import KeyboardManager from "@/components/KeyboardManager.astro"
+import About from "@/components/sections/About.astro";
+import Education from "@/components/sections/Education.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Tail from "@/components/sections/Tail.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
 
-import { basics } from "@cv"
-const { name, label } = basics
+import { basics } from "@cv";
+const { name, label } = basics;
 ---
 
 <Layout title={`Portafolio de ${name} - ${label}`}>
-  <main class="grid max-w-7xl print:max-w-none print:grid-cols-1 relative md:grid-cols-6 print:gap-6 xl:gap-24 gap-12">
-    <div class="md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 space-y-6 print:space-y-0 print:gap-5">
-      <Hero />
-      <About />
-    </div>
-    <div class="md:col-span-4 space-y-12 print:space-y-0 print:col-span-1">
-      <Experience />
-      <Projects />
-      <Skills />
-      <Education  />
-    </div>
-    <Tail />
-  </main>
+	<main class="relative grid gap-12 max-w-7xl md:grid-cols-6 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6">
+		<div class="space-y-6 md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0">
+			<Hero />
+			<About />
+		</div>
+		<div class="space-y-12 md:col-span-4 print:col-span-1 print:space-y-0">
+			<Experience />
+			<Projects />
+			<Skills />
+			<Education />
+		</div>
+		<Tail />
+	</main>
 
-  <KeyboardManager />
+	<KeyboardManager />
 </Layout>
 
 <style>
-  @page { size: auto;  margin: 0mm; }
-  main {
-    padding: 4rem;
-    margin: auto;
-    width: 100%;
-  }
+	@page {
+		size: auto;
+		margin: 0mm;
+	}
+	main {
+		padding: 4rem;
+		margin: auto;
+		width: 100%;
+	}
 
-  @media (width <= 700px) {
-    main {
-      padding: 2rem;
-    }
-  }
+	@media (width <= 700px) {
+		main {
+			padding: 2rem;
+		}
+	}
 </style>

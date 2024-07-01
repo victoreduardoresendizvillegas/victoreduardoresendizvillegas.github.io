@@ -45,33 +45,33 @@ import { projects } from "@cv"
     }
   </ul> -->
 
-  <divs class="print:flex  print:flex-col flex flex-col gap-8">
+  <divs class="flex flex-col gap-8 print:flex print:flex-col">
     {
       projects.map(
         ({ url, description, highlights, name, isActive, github }) => {
           return (
-<div class="flex gap-2 relative items-baseline before:h-px before:absolute before:bg-gradient-to-r before:from-zinc-300 before:via-zinc-300 before:to-zinc-300/0 before:w-full before:bottom-0 before:-mb-4">
+<div class="relative flex items-baseline gap-2 before:h-px before:absolute before:bg-gradient-to-r before:from-zinc-300 before:via-zinc-300 before:to-zinc-300/0 before:w-full before:bottom-0 before:-mb-4">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 hidden mt-0.5 h-5 w-5 self-start text-gray-400 md:inline-block"><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5"/><circle cx="13" cy="12" r="2"/><path d="M18 19c-2.8 0-5-2.2-5-5v8"/><circle cx="20" cy="19" r="2"/></svg>
-  <div class="relative w-full items-baseline justify-between gap-4">
+  <div class="relative items-baseline justify-between w-full gap-4">
     <h3 class="mr-6 flex items-center gap-x-1 gap-y-0.5 font-bold text-gray-800 ">
       { url && <a class="underline" href={url}>{name}</a>}
       {isActive &&<span class="ml-1 text-green-500">•</span>}
     </h3>
     <div class="text-sm text-gray-500">{description}</div>
-    <div class="text-xs mt-1">
+    <div class="mt-1 text-xs">
       {highlights.map((highlight) => {
         return <li>{highlight}</li>
       })}
     </div>
     {github && (
-    <a class="github-code-link right-0 hover:text-zinc-500 top-0 hidden h-6 w-6 md:absolute md:block "
+    <a class="top-0 right-0 hidden w-6 h-6 github-code-link hover:text-zinc-500 md:absolute md:block "
         href={github}
         target="_blank"
         title={`Ver código fuente del proyecto ${name}`}
       >
         <GitHub />
     </a>
-    <div class="text-sm flex gap-1 underline text-gray-500 md:hidden"><GitHub /> GitHub</div>
+    <div class="flex gap-1 text-sm text-gray-500 underline md:hidden"><GitHub /> GitHub</div>
     )}
   </div>
 </div>

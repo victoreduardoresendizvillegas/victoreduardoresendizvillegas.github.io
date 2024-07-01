@@ -1,48 +1,48 @@
 ---
-import { dark_theme, light_theme } from '@cv'; // Asegúrate de que la ruta sea correcta
+import { dark_theme, light_theme } from "@cv"; // Asegúrate de que la ruta sea correcta
 ---
 
 <div class="inline-flex items-center">
-  <!-- <Icon class="w-4 h-4 mr-2" name="palette" /> -->
-  <select name="themeSwitch" id="themeSwitch" class="px-1 py-1 text-xs border rounded-lg bg-base-200 border-base-300 text-base-900 focus:ring-primary accent-primary focus:border-primary">
-    <option value="system">System</option>
-    <option value="dark">Dark</option>
-    <option value="light">Light</option>
-  </select>
+	<!-- <Icon class="w-4 h-4 mr-2" name="palette" /> -->
+	<select name="themeSwitch" id="themeSwitch" class="px-1 py-1 text-xs border rounded-lg bg-base-200 border-base-300 text-base-900 focus:ring-primary accent-primary focus:border-primary">
+		<option value="system">System</option>
+		<option value="dark">Dark</option>
+		<option value="light">Light</option>
+	</select>
 </div>
 
 <style>
-  :global([data-theme="${dark_theme}"]) {
-    color-scheme: dark;
-  }
-  :global([data-theme="${light_theme}"]) {
-    color-scheme: light;
-  }
+	:global([data-theme="${dark_theme}"]) {
+		color-scheme: dark;
+	}
+	:global([data-theme="${light_theme}"]) {
+		color-scheme: light;
+	}
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const select = document.getElementById("themeSwitch");
-    const theme = localStorage.getItem("theme");
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? dark_theme : light_theme;
+	document.addEventListener("DOMContentLoaded", () => {
+		const select = document.getElementById("themeSwitch");
+		const theme = localStorage.getItem("theme");
+		const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? dark_theme : light_theme;
 
-    if (theme !== null) {
-      select.value = theme;
-    } else {
-      select.value = "system";
-    }
+		if (theme !== null) {
+			select.value = theme;
+		} else {
+			select.value = "system";
+		}
 
-    function updateTheme(value) {
-      const theme = value === "system" ? systemTheme : (value === "dark" ? dark_theme : light_theme);
-      document.documentElement.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", value);
-    }
+		function updateTheme(value) {
+			const theme = value === "system" ? systemTheme : value === "dark" ? dark_theme : light_theme;
+			document.documentElement.setAttribute("data-theme", theme);
+			localStorage.setItem("theme", value);
+		}
 
-    updateTheme(select.value);
+		updateTheme(select.value);
 
-    select.addEventListener("change", (event) => {
-      const value = event.target.value;
-      updateTheme(value);
-    });
-  });
+		select.addEventListener("change", (event) => {
+			const value = event.target.value;
+			updateTheme(value);
+		});
+	});
 </script>

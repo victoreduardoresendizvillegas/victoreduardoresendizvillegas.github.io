@@ -1,45 +1,46 @@
 ---
-import { basics } from "@cv"
-import Section from "@/components/Section.astro"
-import Mail from "@/icons/Mail.astro"
-import Phone from "@/icons/Phone.astro"
-import X from "@/icons/X.astro"
-import LinkedIn from "@/icons/LinkedIn.astro"
-import GitHub from "@/icons/GitHub.astro"
-import WorldMap from "@/icons/WorldMap.astro"
-import type { SocialIcon } from "@/types"
+import { basics } from "@cv";
+import Section from "@/components/Section.astro";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+import X from "@/icons/X.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import GitHub from "@/icons/GitHub.astro";
+import WorldMap from "@/icons/WorldMap.astro";
+import type { SocialIcon } from "@/types";
 
-const { name, label, image, location, profiles, phone, email } = basics
-const { city, region } = location
+const { name, label, image, location, profiles, phone, email } = basics;
+const { city, region } = location;
 
 const SOCIAL_ICONS: SocialIcon = {
-  GitHub,
-  LinkedIn,
-  X,
-}
+	GitHub,
+	LinkedIn,
+	X,
+};
 
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
-const linkedUrl = linkedInfo?.url
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedUrl = linkedInfo?.url;
 
-const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
 
 <Section>
-  <div class="flex flex-col-reverse gap-8">
-    <div class="info">
-      <h1>{name}</h1>
-      <h2>{label}</h2>
-      <span>
-        <WorldMap />
-        {city}, {region}
-      </span>
-      <footer class="print">
-        {printInfo}
-      </footer>
-      <footer class="no-print ">
-        {
-          email && (
-            <div x-data="{
+	<div class="flex flex-col-reverse gap-8">
+		<div class="info">
+			<h1>{name}</h1>
+			<h2>{label}</h2>
+			<span>
+				<WorldMap />
+				{city}, {region}
+			</span>
+			<footer class="print">
+				{printInfo}
+			</footer>
+			<footer class="no-print">
+				{
+					email && (
+						<div
+							x-data="{
                 copyText: '${email}',
                 copyNotification: false,
                 copyToClipboard() {
@@ -50,123 +51,118 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
                         that.copyNotification = false;
                     }, 3000);
                 }
-                }" class="relative z-20 flex items-center">
-                <div x-show="copyNotification" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-2" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-2" class="absolute left-0" x-cloak>
-                    <div class="px-3 h-7 -ml-1.5 items-center flex text-xs bg-green-500 border-r border-green-500 -translate-x-full text-white rounded">
-                        <span class="!text-white">Copied!</span>
-                        <div class="absolute right-0 inline-block h-full -mt-px overflow-hidden translate-x-3 -translate-y-2 top-1/2">
-                            <div class="w-3 h-3 origin-top-left transform rotate-45 bg-green-500 border border-transparent"></div>
-                        </div>
-                    </div>
-                </div>
-                <button @click="copyToClipboard();" class="flex items-center justify-center h-8 text-xs bg-white border rounded-md cursor-pointer w-9 border-neutral-200/60 hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none text-neutral-500 hover:text-neutral-600 group">
-                    <svg x-show="copyNotification" class="w-4 h-4 text-green-500 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" x-cloak><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span x-show="!copyNotification"><Mail /></span>
-                </button>
-            </div>
+                }"
+							class="relative z-20 flex items-center"
+						>
+							<div x-show="copyNotification" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-x-2" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-2" class="absolute left-0" x-cloak>
+								<div class="-ml-1.5 flex h-7 -translate-x-full items-center rounded border-r border-green-500 bg-green-500 px-3 text-xs text-white">
+									<span class="!text-white">Copied!</span>
+									<div class="absolute right-0 inline-block h-full -mt-px overflow-hidden translate-x-3 -translate-y-2 top-1/2">
+										<div class="w-3 h-3 origin-top-left transform rotate-45 bg-green-500 border border-transparent" />
+									</div>
+								</div>
+							</div>
+							<button @click="copyToClipboard();" class="flex items-center justify-center h-8 text-xs bg-white border rounded-md cursor-pointer group w-9 border-neutral-200/60 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-600 focus:bg-white focus:outline-none active:bg-white">
+								<svg x-show="copyNotification" class="w-4 h-4 text-green-500 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" x-cloak>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+								</svg>
+								<span x-show="!copyNotification">
+									<Mail />
+								</span>
+							</button>
+						</div>
 
-            // <a
-            //   href={`mailto:${email}`}
-            //   title={`Send an email to ${name} at ${email}`}
-            //   target="_blank"
-            //   rel="noopener noreferrer"
-            // >
-            //   <Mail />
-            // </a>
-          )
-        }
-        {
-          phone && (
-            <a
-              href={`tel:${phone}`}
-              title={`Call ${name} at ${phone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Phone />
-            </a>
-          )
-        }
-        {
-          profiles.map(({ network, url }) => {
-            const Icon = SOCIAL_ICONS[network]
+						// <a
+						//   href={`mailto:${email}`}
+						//   title={`Send an email to ${name} at ${email}`}
+						//   target="_blank"
+						//   rel="noopener noreferrer"
+						// >
+						//   <Mail />
+						// </a>
+					)
+				}
+				{
+					phone && (
+						<a href={`tel:${phone}`} title={`Call ${name} at ${phone}`} target="_blank" rel="noopener noreferrer">
+							<Phone />
+						</a>
+					)
+				}
+				{
+					profiles.map(({ network, url }) => {
+						const Icon = SOCIAL_ICONS[network];
 
-            return (
-              <a
-                href={url}
-                title={`Visit ${name} profile on ${network}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon />
-              </a>
-            )
-          })
-        }
-      </footer>
-    </div>
-    <figure class=" print:hidden ">
-      <img src={image} alt={name} />
-    </figure>
-  </div>
+						return (
+							<a href={url} title={`Visit ${name} profile on ${network}`} target="_blank" rel="noopener noreferrer">
+								<Icon />
+							</a>
+						);
+					})
+				}
+			</footer>
+		</div>
+		<figure class="print:hidden">
+			<img src={image} alt={name} />
+		</figure>
+	</div>
 </Section>
 
 <style>
-  .info {
-    @apply flex flex-col gap-2 print:pr-0 print:gap-0 pr-8;
-  }
+	.info {
+		@apply flex flex-col gap-2 pr-8 print:gap-0 print:pr-0;
+	}
 
-  h1 {
-    @apply text-4xl print:text-3xl font-bold;
-  }
+	h1 {
+		@apply text-4xl font-bold print:text-3xl;
+	}
 
-  h2 {
-    @apply text-zinc-700 text-xl print:text-lg font-medium text-balance;
-  }
+	h2 {
+		@apply text-balance text-xl font-medium text-zinc-700 print:text-lg;
+	}
 
-  img {
-    @apply aspect-square bg-cover w-32 rounded-2xl
-  }
+	img {
+		@apply aspect-square w-32 rounded-2xl bg-cover;
+	}
 
-  span {
-    @apply text-zinc-700 tracking-wider flex items-center gap-1 text-sm;
-  }
+	span {
+		@apply flex items-center gap-1 text-sm tracking-wider text-zinc-700;
+	}
 
-  footer {
-    @apply text-zinc-500 flex gap-1 mt-2 text-sm ;
-  }
+	footer {
+		@apply mt-2 flex gap-1 text-sm text-zinc-500;
+	}
 
-  footer a {
-    @apply text-zinc-700 inline-flex items-center justify-center border border-zinc-200 p-1 size-8 rounded-md transition-all duration-500 ease-linear hover:border-zinc-300 hover:bg-zinc-200;
-  }
+	footer a {
+		@apply inline-flex size-8 items-center justify-center rounded-md border border-zinc-200 p-1 text-zinc-700 transition-all duration-500 ease-linear hover:border-zinc-300 hover:bg-zinc-200;
+	}
 
-  @media (width <= 700px) {
-    .container {
-      flex-direction: column-reverse;
-    }
+	@media (width <= 700px) {
+		.container {
+			flex-direction: column-reverse;
+		}
 
-    .info {
-      @apply md:justify-center md:items-center ;
-      /* justify-content: center; */
-      /* align-items: center; */
-      padding-right: 0;
-      /* text-align: center; */
-    }
+		.info {
+			@apply md:items-center md:justify-center;
+			/* justify-content: center; */
+			/* align-items: center; */
+			padding-right: 0;
+			/* text-align: center; */
+		}
 
-    figure {
-      @apply md:justify-center flex md:items-center ;
-      /* display: flex; */
-      /* justify-content: center; */
-      /* align-items: center; */
-    }
+		figure {
+			@apply flex md:items-center md:justify-center;
+			/* display: flex; */
+			/* justify-content: center; */
+			/* align-items: center; */
+		}
 
-    h2 {
-      text-wrap: balance;
-    }
+		h2 {
+			text-wrap: balance;
+		}
 
-    figure {
-      @apply md:mx-auto
-      /* margin: 0 auto; */
-    }
-  }
+		figure {
+			@apply /* margin: 0 auto; */ md:mx-auto;
+		}
+	}
 </style>
