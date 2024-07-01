@@ -36,7 +36,6 @@ const SKILLS_ICONS: Record<string, any> = {
   Flutter,
 }
 ---
-
 <Section title="Experience">
   <ul class="flex flex-col">
     {work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type }) => {
@@ -45,11 +44,11 @@ const SKILLS_ICONS: Record<string, any> = {
 
       return (
         <li class="relative desv print:py-2">
-          <div class="group relative grid pb-1 transition-all sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+          <div class="group relative grid pb-1 transition-all sm:grid-cols-12    sm:gap-8 md:gap-6 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
             <header class="relative mt-1 text-xs font-semibold sm:col-span-2" aria-label="">
               <time datetime={startDate} data-title={startDate}>{startYear}</time> - <time datetime={endDate} data-title={endDate}>{endYear}</time>
             </header>
-            <div class="relative flex flex-col pb-6 before:-ml-6 sm:col-span-10 before:w-px before:absolute before:bg-gradient-to-b before:from-zinc-300 before:to-zinc-200 before:h-full before:mt-2">
+            <div class="relative flex flex-col pb-6 before:-ml-6 sm:col-span-10 before:w-px before:absolute before:bg-gradient-to-b before:from-zinc-300 before:to-zinc-200 dark:before:from-zinc-700 dark:before:to-zinc-800 before:h-full before:mt-2">
             <div class="absolute w-2 h-2 bg-zinc-400 rounded-full mt-2 -translate-x-[1.71rem] ring ring-white"></div>
               <h3>
                 <div class="inline-flex items-center text-lg font-bold leading-tight group/link focus-visible:text-amber-500" aria-label="{position} - {company}">
@@ -91,7 +90,7 @@ const SKILLS_ICONS: Record<string, any> = {
                 )}
 
 {(responsibilities || achievements) &&  (
-                <div class=" flex relative flex-col max-sm:!h-auto print:!h-auto gap-4 [&>*>h4]:font-bold md:after:from-white md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
+                <div class=" flex relative flex-col max-sm:!h-auto print:!h-auto gap-4 [&>*>h4]:font-bold md:after:from-white dark:md:after:from-zinc-900 md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
                 {responsibilities && (
                   <div class="flex flex-col gap-1">
                     <h4>Responsibilities:</h4>
