@@ -6,59 +6,20 @@ import { projects } from "@cv"
 ---
 
 <Section title="Projects">
-  <!-- <ul>
-    {
-      projects.map(
-        ({ url, description, highlights, name, isActive, github }) => {
-          return (
-            <li>
-              <article>
-                <header>
-                  <h3>
-                    <a href={url} target="_blank" title={`See ${name} project `}>
-                      {name}
-                    </a>
-                    {isActive && <span>•</span>}
-                    {github && (
-                      <a
-                        class="github-code-link"
-                        href={github}
-                        target="_blank"
-                        title={`Ver código fuente del proyecto ${name}`}
-                      >
-                        <GitHub />
-                      </a>
-                    )}
-                  </h3>
-                  <p>{description}</p>
-                </header>
-                <footer>
-                  {highlights.map((highlight) => {
-                    return <span>{highlight}</span>
-                  })}
-                </footer>
-              </article>
-            </li>
-          )
-        }
-      )
-    }
-  </ul> -->
-
   <divs class="flex flex-col gap-8 print:flex print:flex-col">
     {
       projects.map(
         ({ url, description, highlights, name, isActive, github }) => {
           return (
-<div class="relative flex items-baseline gap-2 before:h-px before:absolute before:bg-gradient-to-r before:from-zinc-300 before:via-zinc-300 before:to-zinc-300/0 before:w-full before:bottom-0 before:-mb-4">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 hidden mt-0.5 h-5 w-5 self-start text-gray-400 md:inline-block"><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5"/><circle cx="13" cy="12" r="2"/><path d="M18 19c-2.8 0-5-2.2-5-5v8"/><circle cx="20" cy="19" r="2"/></svg>
+<div class="relative flex items-baseline gap-2 before:h-px before:absolute before:bg-gradient-to-r before:from-zinc-300 before:via-zinc-300 dark:before:from-zinc-800 dark:before:via-zinc-700 dark:before:to-zinc-800/0 before:to-zinc-300/0 before:w-full before:bottom-0 before:-mb-4">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 hidden mt-0.5 h-5 w-5 self-start text-gray-400 dark:text-gray-400 md:inline-block"><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5"/><circle cx="13" cy="12" r="2"/><path d="M18 19c-2.8 0-5-2.2-5-5v8"/><circle cx="20" cy="19" r="2"/></svg>
   <div class="relative items-baseline justify-between w-full gap-4">
-    <h3 class="mr-6 flex items-center gap-x-1 gap-y-0.5 font-bold text-gray-800 ">
+    <h3 class="mr-6 flex items-center gap-x-1 gap-y-0.5 font-bold">
       { url && <a class="underline" href={url}>{name}</a>}
       {isActive &&<span class="ml-1 text-green-500">•</span>}
     </h3>
-    <div class="text-sm text-gray-500">{description}</div>
-    <div class="mt-1 text-xs">
+    <div class="text-sm opacity-70">{description}</div>
+    <div class="mt-1 text-xs opacity-70">
       {highlights.map((highlight) => {
         return <li>{highlight}</li>
       })}
@@ -71,7 +32,7 @@ import { projects } from "@cv"
       >
         <GitHub />
     </a>
-    <div class="flex gap-1 text-sm text-gray-500 underline md:hidden"><GitHub /> GitHub</div>
+    <div class="flex gap-1 text-sm  underline md:hidden"><GitHub /> GitHub</div>
     )}
   </div>
 </div>
@@ -108,11 +69,6 @@ import { projects } from "@cv"
   article h3 {
     @apply mb-1 text-xl font-bold
   }
-
-  article a {
-    @apply text-zinc-800
-  }
-
   article a:hover {
     @apply underline;
   }

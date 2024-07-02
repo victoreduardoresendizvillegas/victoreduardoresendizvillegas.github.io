@@ -5,7 +5,7 @@ import { education } from "@cv";
 ---
 
 <Section title="Education">
-	<ul class="py-3 space-y-4 print:space-y-0">
+	<ul class="space-y-4 py-3 print:space-y-0">
 		{
 			education.map(({ institution, startDate, endDate, area }) => {
 				const startYear = new Date(startDate).getFullYear();
@@ -14,15 +14,15 @@ import { education } from "@cv";
 
 				return (
 					<div class="flex items-baseline">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="self-start hidden w-5 h-5 mr-2 text-gray-400 md:inline-block dark:text-gray-600">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 hidden h-5 w-5 self-start md:inline-block">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
 						</svg>
-						<div class="relative items-baseline justify-between w-full gap-2">
-							<h3 class="mr-6 items-baseline gap-x-2 gap-y-0.5 font-medium text-gray-800">
+						<div class="relative w-full items-baseline justify-between gap-2">
+							<h3 class="mr-6 items-baseline gap-x-2 gap-y-0.5 font-medium">
 								<a href="https://aaronfrancis.com/2024/what-if-you-tried-hard-dac139a5">{institution}</a>
 							</h3>
-							<div class="text-sm text-gray-500">{area}</div>
-							<time class="top-0 right-0 text-xs md:absolute md:block">{years}</time>
+							<div class="text-sm opacity-70">{area}</div>
+							<time class="right-0 top-0 text-xs md:absolute md:block">{years}</time>
 						</div>
 					</div>
 				);

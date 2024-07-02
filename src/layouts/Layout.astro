@@ -81,7 +81,7 @@ const { image, summary, url } = basics;
 	}
 
 	p {
-		color: #666;
+		@apply opacity-70;
 		font-size: 0.9rem;
 		line-height: 1.5;
 		margin: 0;
@@ -94,6 +94,13 @@ const { image, summary, url } = basics;
 
 	.dev * {
 		@apply border border-red-500/50 bg-red-500/5;
+	}
+	#hotkeypad [data-container] {
+		@apply border-t border-zinc-100 bg-white dark:border-zinc-700 dark:bg-zinc-800;
+	}
+
+	#hotkeypad [data-backdrop] {
+		@apply !bg-zinc-800 !opacity-80;
 	}
 
 	@media print {
