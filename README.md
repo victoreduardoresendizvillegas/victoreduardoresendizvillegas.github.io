@@ -1,25 +1,4 @@
-<div align="center">
-<!-- <img src="logo.png" height="90px" width="auto" />  -->
-<h2><em>Minimalist</em> Resume Template for Web and PDF</h2>
-<p>CV JSON schema from <a href="https://jsonresume.org/schema/">jsonresume.org</a></p>
-<p>Based on the design by <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a></p>
-</div>
-
-<div align="center">
-    <a href="#🚀-getting-started">Getting Started</a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="#🧞-commands">Commands</a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="#🔑-license">License</a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="https://midu.dev">
-        Personal
-    </a>
-</div>
-
-<p></p>
-
-<div align="center">
+## Print-friendly portfolio CV
 
 ![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
@@ -27,10 +6,6 @@
 ![GitHub issues](https://img.shields.io/github/issues/Smilesharks/dev-portfolio)
 ![GitHub forks](https://img.shields.io/github/forks/Smilesharks/dev-portfolio)
 ![GitHub PRs](https://img.shields.io/github/issues-pr/Smilesharks/dev-portfolio)
-
-</div>
-
-<!-- <img src="portada.png"></img>  -->
 
 ## 🛠️ Stack
 
@@ -40,7 +15,7 @@
 
 ## 🚀 Getting Started
 
-### 1. Use this [repo](https://github.com/midudev/minimalist-portfolio-json) as an Astro project template
+### 1. Use this Repo as an Astro Project Template
 
 - I use [pnpm](https://pnpm.io/installation) as my package manager.
 
@@ -48,10 +23,11 @@
 # Enable pnpm on MacOS, WSL & Linux:
 corepack enable
 corepack prepare pnpm@latest --activate
+```
 
 # Initialize the project
-pnpm create astro@latest -- --template midudev/minimalist-portfolio-json
-
+```bash
+pnpm create astro@latest -- --template Smilesharks/dev-portfolio
 ```
 
 ### 2. Add Your Content:
@@ -75,6 +51,7 @@ pnpm dev
 | ⚙️  | `build`         | Checks for errors and creates a production build in `./dist/`. |
 | ⚙️  | `preview`       | Local preview at `localhost:4321`                                       |
 
-## 🔑 License
 
-[MIT](LICENSE.txt) - Created by [**midudev**](https://midu.dev).
+CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
+
+Based on [**Bartosz Jarocki - Print-friendly, minimalist CV page**](https://github.com/BartoszJarocki/cv) and [**Miguel Ángel Durán - minimalist-portfolio-json**](https://github.com/midudev/minimalist-portfolio-json)
