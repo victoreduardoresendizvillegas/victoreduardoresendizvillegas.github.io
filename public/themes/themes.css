@@ -23,13 +23,70 @@
     --color-button-accent-hover: 231, 121, 43;
     --color-button-muted: 255, 255, 255;
   }
-  .theme-red {
-    --color-text-base: 255, 255, 255;
-    --color-text-muted: 254, 202, 202;
-    --color-text-inverted: 220, 38, 38;
-    --color-fill: 185, 28, 28;
-    --color-button-accent: 255, 255, 255;
-    --color-button-accent-hover: 254, 242, 242;
-    --color-button-muted: 239, 68, 68;
+  .red {
+    --color-text-base: 245, 245, 245;
+    --color-text-muted: 130, 130, 130;
+    --color-text-inverted: 245, 245, 245;
+    --color-fill: 20, 20, 20;
+    --muted: 45, 45, 45;
+    --color: 190, 30, 45;
+    --color-button-accent: 190, 30, 45;
+    --color-button-accent-hover: 220, 50, 70;
+    --color-button-muted: 245, 245, 245;
+  }
+  .red-light {
+    --color-text-base: 35, 35, 35;
+    --color-text-muted: 100, 100, 100;
+    --color-text-inverted: 245, 245, 245;
+    --color-fill: 245, 245, 245;
+    --muted: 220, 220, 220;
+    --color: 190, 30, 45;
+    --color-button-accent: 190, 30, 45;
+    --color-button-accent-hover: 220, 50, 70;
+    --color-button-muted: 245, 245, 245;
+  }
+  .green {
+    --color-text-base: 230, 230, 230;
+    --color-text-muted: 100, 100, 100;
+    --color-text-inverted: 230, 230, 230;
+    --color-fill: 25, 25, 25;
+    --muted: 55, 55, 55;
+    --color: 100, 200, 100;
+    --color-button-accent: 100, 200, 100;
+    --color-button-accent-hover: 120, 220, 120;
+    --color-button-muted: 230, 230, 230;
+  }
+  .green-light {
+    --color-text-base: 40, 40, 40;
+    --color-text-muted: 110, 110, 110;
+    --color-text-inverted: 230, 230, 230;
+    --color-fill: 230, 230, 230;
+    --muted: 200, 200, 200;
+    --color: 100, 200, 100;
+    --color-button-accent: 100, 200, 100;
+    --color-button-accent-hover: 120, 220, 120;
+    --color-button-muted: 230, 230, 230;
+  }
+  .blue {
+    --color-text-base: 240, 240, 240;
+    --color-text-muted: 120, 120, 120;
+    --color-text-inverted: 240, 240, 240;
+    --color-fill: 30, 30, 30;
+    --muted: 50, 50, 50;
+    --color: 0, 153, 204;
+    --color-button-accent: 0, 153, 204;
+    --color-button-accent-hover: 0, 185, 255;
+    --color-button-muted: 240, 240, 240;
+  }
+  .blue-light {
+    --color-text-base: 30, 30, 30;
+    --color-text-muted: 90, 90, 90;
+    --color-text-inverted: 240, 240, 240;
+    --color-fill: 240, 240, 240;
+    --muted: 210, 210, 210;
+    --color: 0, 153, 204;
+    --color-button-accent: 0, 153, 204;
+    --color-button-accent-hover: 0, 185, 255;
+    --color-button-muted: 240, 240, 240;
   }
 }
