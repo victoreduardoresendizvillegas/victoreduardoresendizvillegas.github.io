@@ -2,7 +2,7 @@
   "basics": {
     "name": "John Doe",
     "label": "Junior Full Stack Developer",
-    "image": "/me.jpg",
+    "image": "/me_avatar.jpg",
     "email": "john.doe@example.com",
     "phone": "+1 555-555-5555",
     "url": "https://johndoe.dev",
@@ -62,29 +62,30 @@
       ]
     },
     {
-      "name": "Tech Startup",
-      "position": "Junior Web Developer",
-      "location_type": "On site",
-      "location": "Auckland, New Zealand",
-      "url": "https://techstartup.com",
-      "startDate": "2023-01-01",
-      "endDate": "2024-01-01",
-      "summary": "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.",
+      "name": "Innovative Solutions",
+      "position": "Junior Software Developer",
+      "location_type": "Hybrid",
+      "location": "Wellington, New Zealand",
+      "url": "https://innovativesolutions.com",
+      "startDate": "2022-06-01",
+      "endDate": "2023-06-01",
+      "summary": "Assisting in the development and maintenance of software applications using Python and Django. Collaborating with cross-functional teams to ensure quality and timely delivery of software solutions.",
       "highlights": [
-        "Improved website performance by optimizing code"
+        "Contributed to a major project that streamlined internal workflows, improving efficiency by 30%"
       ],
       "responsibilities": [
-        "Collaborated with senior developers to design and implement web applications using modern JavaScript frameworks.",
-        "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
-        "Participated in code reviews and contributed to improving coding standards within the team."
+        "Developed and maintained backend services using Python and Django.",
+        "Worked closely with front-end developers to integrate user-facing elements with server-side logic.",
+        "Participated in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals."
       ],
       "achievements": [
-        "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs."
+        "Successfully implemented a feature that enhanced user authentication, improving security measures."
       ],
       "skills": [
-        "React",
-        "Tailwind",
-        "GitHub"
+        "Python",
+        "Django",
+        "SQL",
+        "Git"
       ]
     },
     {
@@ -219,7 +220,7 @@
       ]
     },
     {
-      "name": "Node.js",
+      "name": "Node",
       "level": "Intermediate",
       "keywords": [
         "Web Development",
@@ -323,18 +324,19 @@
         "Built with JavaScript and OpenWeatherMap API",
         "Responsive design"
       ],
-      "url": "https://weatherapp.com"
+      "url": "https://weatherapp.com",
+      "github": "https://github.com"
     },
     {
       "name": "Task Manager",
-      "isActive": true,
+      "isActive": false,
       "description": "A simple task management app to keep track of daily tasks.",
       "highlights": [
         "Built with Node.js and MongoDB",
         "User authentication and CRUD operations"
       ],
       "url": "https://taskmanager.com",
-      "github": "https://taskmanager.com"
+      "github": "https://github.com"
     },
     {
       "name": "E-commerce Site",

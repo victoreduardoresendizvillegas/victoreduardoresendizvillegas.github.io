@@ -32,8 +32,12 @@ const { image, summary, url } = basics;
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={summary} />
 		<meta name="twitter:image" content="" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim" />
+
+		<link rel="stylesheet" href="/src/themes/themes.css" />
 	</head>
-	<body>
+	<body class="bg-skin-fill">
 		<slot />
 	</body>
 </html>
@@ -81,10 +85,8 @@ const { image, summary, url } = basics;
 	}
 
 	p {
-		@apply opacity-70;
-		font-size: 0.9rem;
+		@apply text-sm text-skin-muted;
 		line-height: 1.5;
-		margin: 0;
 		text-wrap: pretty;
 	}
 

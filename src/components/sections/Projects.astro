@@ -1,133 +1,137 @@
 ---
-import GitHub from "@/icons/GitHub.astro"
-import Section from "../Section.astro"
+import GitHub from "@/icons/GitHub.astro";
+import Arrow from "@/icons/Arrow.astro";
+import Section from "../Section.astro";
 
-import { projects } from "@cv"
+import { projects } from "@cv";
 ---
 
 <Section title="Projects">
-  <divs class="flex flex-col gap-8 print:flex print:flex-col">
-    {
-      projects.map(
-        ({ url, description, highlights, name, isActive, github }) => {
-          return (
-<div class="relative flex items-baseline gap-2 before:h-px before:absolute before:bg-gradient-to-r before:from-zinc-300 before:via-zinc-300 dark:before:from-zinc-800 dark:before:via-zinc-700 dark:before:to-zinc-800/0 before:to-zinc-300/0 before:w-full before:bottom-0 before:-mb-4">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 hidden mt-0.5 h-5 w-5 self-start text-gray-400 dark:text-gray-400 md:inline-block"><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5"/><circle cx="13" cy="12" r="2"/><path d="M18 19c-2.8 0-5-2.2-5-5v8"/><circle cx="20" cy="19" r="2"/></svg>
-  <div class="relative items-baseline justify-between w-full gap-4">
-    <h3 class="mr-6 flex items-center gap-x-1 gap-y-0.5 font-bold">
-      { url && <a class="underline" href={url}>{name}</a>}
-      {isActive &&<span class="ml-1 text-green-500">•</span>}
-    </h3>
-    <div class="text-sm opacity-70">{description}</div>
-    <div class="mt-1 text-xs opacity-70">
-      {highlights.map((highlight) => {
-        return <li>{highlight}</li>
-      })}
-    </div>
-    {github && (
-    <a class="top-0 right-0 hidden w-6 h-6 github-code-link hover:text-zinc-500 md:absolute md:block "
-        href={github}
-        target="_blank"
-        title={`Ver código fuente del proyecto ${name}`}
-      >
-        <GitHub />
-    </a>
-    <div class="flex gap-1 text-sm  underline md:hidden"><GitHub /> GitHub</div>
-    )}
-  </div>
-</div>
-          )
-        }
-      )
-    }
-  </divs>
+	<div class="grid grid-cols-2 gap-3 print:flex print:flex-col">
+		{
+			projects.map(({ url, description, highlights, name, isActive, github }) => {
+				return (
+					<div role="contentinfo" class="grid-span-1 ring-skin-muted relative flex flex-col rounded-md px-4 py-5 shadow-sm ring-1">
+						<div class="pointer-events-none absolute -inset-px opacity-0 transition duration-300" style="background: radial-gradient(600px circle at 265px 36px, rgba(97, 97, 97, 0.1), transparent 60%);" />
 
-  
-  
+						<div class="flex items-center justify-between space-x-[10px]">
+							<div class="flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-git-2 size-5">
+									<path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5" />
+									<circle cx="13" cy="12" r="2" />
+									<path d="M18 19c-2.8 0-5-2.2-5-5v8" />
+									<circle cx="20" cy="19" r="2" />
+								</svg>
+								<div class="flex items-center gap-[6px]">
+									{isActive ? (
+										<a class="hover:text-skin-hue group flex items-center gap-[6px] decoration-dotted underline-offset-[5px] hover:underline" href={url} title={`Ver ${name}`} target="_blank">
+											{name}
+											<span class="text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+												<Arrow />
+											</span>
+										</a>
+									) : (
+										<span>{name}</span>
+									)}
+								</div>
+							</div>
 
+							{github && (
+								<a href={github} title="View slug repository on GitHub" target="_blank" rel="noopener" class="opacity-75 transition-opacity duration-100 hover:opacity-100">
+									<GitHub />
+								</a>
+							)}
+						</div>
+
+						<p class="text-sm">{description}</p>
+						<div class="mt-1 text-sm text-skin-muted">
+							{highlights.map((highlight) => {
+								return <li>{highlight}</li>;
+							})}
+						</div>
+					</div>
+				);
+			})
+		}
+	</div>
 </Section>
 
-
 <style>
-  ul {
-    @apply print:flex print:flex-col grid gap-4 print:mx-0 -mx-4;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-    /* display: grid;
-    gap: 1rem;
-    margin-inline: -16px; */
-  }
+	ul {
+		@apply -mx-4 grid gap-4 print:mx-0 print:flex print:flex-col;
+	}
 
-  article {
-    @apply print:p-0 print:border-0 rounded-lg border border-zinc-500 flex gap-4 flex-col p-4 h-full;
-    border: 1px solid #f2f2f2;
-  }
+	article {
+		@apply flex h-full flex-col gap-4 rounded-lg border border-zinc-500 p-4 print:border-0 print:p-0;
+		border: 1px solid #f2f2f2;
+	}
 
-  article header {
-    @apply flex-1;
-  }
+	article header {
+		@apply flex-1;
+	}
 
-  article h3 {
-    @apply mb-1 text-xl font-bold
-  }
-  article a:hover {
-    @apply underline;
-  }
+	article h3 {
+		@apply mb-1 text-xl font-bold;
+	}
+	article a:hover {
+		@apply underline;
+	}
 
-  article p {
-    @apply text-xs leading-5 mb-1
-  }
+	article p {
+		@apply mb-1 text-xs leading-5;
+	}
 
-  article h3 span {
-    @apply text-green-500 print:hidden animate-pulse text-xl;
-  }
+	article h3 span {
+		@apply animate-pulse text-xl text-green-500 print:hidden;
+	}
 
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    font-size: 0.6rem;
-  }
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+		font-size: 0.6rem;
+	}
 
-  footer span {
-    border-radius: 6px;
-    background: #eee;
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
-  }
+	footer span {
+		border-radius: 6px;
+		background: #eee;
+		color: #444;
+		font-size: 0.6rem;
+		font-weight: 500;
+		padding: 0.2rem 0.6rem;
+	}
 
-  .github-code-link {
-    margin-left: 5px;
-  }
+	.github-code-link {
+		margin-left: 5px;
+	}
 
-  @keyframes flicker {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.25;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+	@keyframes flicker {
+		0% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.25;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 
-  @media (width <= 700px) {
-    ul {
-      margin-inline: 0px;
-    }
+	@media (width <= 700px) {
+		ul {
+			margin-inline: 0px;
+		}
 
-    article {
-      border: none;
-      box-shadow: 0 1px 1px #f2f2f2;
-      padding: 0 0 16px 0;
-    }
-  }
+		article {
+			border: none;
+			box-shadow: 0 1px 1px #f2f2f2;
+			padding: 0 0 16px 0;
+		}
+	}
 
-  @media print {
-    article h3 span {
-      animation-name: none;
-    }
-  }
+	@media print {
+		article h3 span {
+			animation-name: none;
+		}
+	}
 </style>
