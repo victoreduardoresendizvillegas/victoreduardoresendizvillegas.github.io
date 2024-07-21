@@ -7,11 +7,11 @@ interface Props {
 
 const { title } = Astro.props;
 
-const { image, summary, url } = basics;
+const { image, summary, url, theme } = basics;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
@@ -37,7 +37,7 @@ const { image, summary, url } = basics;
 
 		<link rel="stylesheet" href="/themes/themes.css" />
 	</head>
-	<body class="relative bg-skin-fill">
+	<body data-theme={theme} class="relative bg-skin-fill">
 		<div class="absolute top-0 -z-10 h-full w-full print:hidden">
 			<div class="bg-skin-hue/10 dark:bg-skin-hue/50 absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 dark:invert"></div>
 		</div>

@@ -50,7 +50,3 @@ export default {
   },
   plugins: [],
 };
-
-// agregar color de botones
-// agregar bordes
-// agregar decoration
