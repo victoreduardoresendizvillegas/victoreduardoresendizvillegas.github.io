@@ -15,8 +15,10 @@ import { certificates } from "@cv";
 
 				return (
 					<div class="flex items-baseline">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 hidden h-5 w-5 self-start md:inline-block">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 hidden h-5 w-5 self-start md:inline-block">
+							<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+							<path d="M22 10v6" />
+							<path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
 						</svg>
 						<div class="relative w-full items-baseline justify-between gap-2">
 							<h3 class="mr-6 items-baseline gap-x-2 gap-y-0.5 font-medium">
@@ -50,7 +52,7 @@ import { certificates } from "@cv";
 								</svg>
 								<div class="relative w-full items-baseline justify-between gap-2">
 									<h3 class="mr-6 items-baseline gap-x-2 gap-y-0.5 font-medium">
-										<a class="hover:text-skin-hue group flex items-center gap-[6px] decoration-dotted underline-offset-[5px] hover:underline" href={url} target="_blank">
+										<a class="hover:text-skin-hue group flex items-center gap-[6px] text-skin-base decoration-dotted underline-offset-[5px] hover:underline" href={url} target="_blank">
 											{name}
 										</a>
 									</h3>

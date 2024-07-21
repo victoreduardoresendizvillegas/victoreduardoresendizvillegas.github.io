@@ -39,7 +39,7 @@ const { image, summary, url, theme } = basics;
 	</head>
 	<body data-theme={theme} class="relative bg-skin-fill">
 		<div class="absolute top-0 -z-10 h-full w-full print:hidden">
-			<div class="bg-skin-hue/10 dark:bg-skin-hue/50 absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 dark:invert"></div>
+			<div class="bg-skin-hue/10 absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 dark:bg-white/5"></div>
 		</div>
 		<slot />
 	</body>
@@ -72,6 +72,7 @@ const { image, summary, url, theme } = basics;
 	h2,
 	h3,
 	h4 {
+		@apply text-skin-base;
 		margin: 0;
 		font-family:
 			system-ui,

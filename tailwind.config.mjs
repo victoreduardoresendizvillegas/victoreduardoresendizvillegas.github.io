@@ -8,7 +8,7 @@ function withOpacity(variableName) {
 }
 
 export default {
-  darkMode: "class", // Usando "class" para el modo oscuro en lugar de "selector"
+  darkMode: "class",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
