@@ -1,14 +1,12 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
+import react from "@astrojs/react"; // Asegúrate que esta línea esté presente
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://victoreduardoresendizvillegas.github.io',
-  base: '/victoreduardoresendizvillegas',
+  base: '/victoreduardoresendizvillegas.github.io',
   integrations: [
     tailwind(),
-    react()
-  ],
-  output: 'static'
+    react() // Y esta también
+  ]
 });
