@@ -3,8 +3,6 @@ name: Deploy Astro Portfolio
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build:
@@ -20,7 +18,9 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm install @astrojs/react
 
       - name: Build Astro site
         run: npm run build
