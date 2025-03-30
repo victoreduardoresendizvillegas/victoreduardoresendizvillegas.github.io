@@ -2,102 +2,72 @@
 
 @layer base {
   :root {
-    /* Colores base */
-    --color-text-base: 0, 0, 0;
-    --color-text-muted: 120, 120, 120;
-    --color-text-inverted: 255, 255, 255;
-    --color-fill: 245, 245, 245;
-    --muted: 200, 200, 200;
-    --color: 249, 115, 22;
-    --color-button-accent: 249, 115, 22;
-    --color-button-accent-hover: 55, 55, 55;
-    --color-button-muted: 244, 239, 238;
+    /* Colores base para el tema claro */
+    --color-text-base: 0, 0, 0; /* Texto negro */
+    --color-text-muted: 120, 120, 120; /* Texto atenuado */
+    --color-text-inverted: 255, 255, 255; /* Texto invertido */
+    --color-fill: 245, 245, 245; /* Fondo claro */
+    --muted: 200, 200, 200; /* Color atenuado */
+    --color: 249, 115, 22; /* Color principal */
+    --color-button-accent: 249, 115, 22; /* Color de botón */
+    --color-button-accent-hover: 55, 55, 55; /* Color de botón al pasar el ratón */
+    --color-button-muted: 244, 239, 238; /* Color de botón atenuado */
 
-    /* Temas */
+    /* Temas adicionales */
+    [data-theme="light"] {
+      --color-text-base: 0, 0, 0; /* Texto negro */
+      --color-text-muted: 150, 150, 150; /* Texto atenuado */
+      --color-text-inverted: 0, 0, 0; /* Texto invertido */
+      --color-fill: 255, 255, 255; /* Fondo blanco */
+      --muted: 220, 220, 220; /* Color atenuado */
+      --color: 0, 123, 255; /* Color azul para acentos */
+      --color-button-accent: 0, 123, 255; /* Color de botón */
+      --color-button-accent-hover: 0, 105, 217; /* Color de botón al pasar el ratón */
+      --color-button-muted: 240, 240, 240; /* Color de botón atenuado */
+    }
+
     [data-theme="blue"] {
-      --color-text-base: 15, 23, 42;
-      --color-text-muted: 100, 116, 139;
-      --color-text-inverted: 240, 240, 240;
-      --color-fill: 203, 213, 225;
-      --muted: 148, 163, 184;
-      --color: 59, 130, 246;
-      --color-button-accent: 59, 130, 246;
-      --color-button-accent-hover: 0, 185, 255;
-      --color-button-muted: 226, 232, 240;
+      --color-text-base: 15, 23, 42; /* Texto oscuro */
+      --color-text-muted: 100, 116, 139; /* Texto atenuado */
+      --color-text-inverted: 240, 240, 240; /* Texto invertido */
+      --color-fill: 203, 213, 225; /* Fondo azul claro */
+      --muted: 148, 163, 184; /* Color atenuado */
+      --color: 59, 130, 246; /* Color azul */
+      --color-button-accent: 59, 130, 246; /* Color de botón azul */
+      --color-button-accent-hover: 0, 185, 255; /* Color de botón al pasar el ratón */
+      --color-button-muted: 226, 232, 240; /* Color de botón atenuado */
     }
 
     [data-theme="red"] {
-      --color-text-base: 28, 25, 23;
-      --color-text-muted: 100, 100, 100;
-      --color-text-inverted: 245, 245, 245;
-      --color-fill: 231, 229, 228;
-      --muted: 220, 220, 220;
-      --color: 239, 68, 68;
-      --color-button-accent: 239, 68, 68;
-      --color-button-accent-hover: 220, 50, 70;
-      --color-button-muted: 245, 245, 245;
+      --color-text-base: 28, 25, 23; /* Texto oscuro */
+      --color-text-muted: 100, 100, 100; /* Texto atenuado */
+      --color-text-inverted: 245, 245, 245; /* Texto invertido */
+      --color-fill: 231, 229, 228; /* Fondo gris claro */
+      --muted: 220, 220, 220; /* Color atenuado */
+      --color: 239, 68, 68; /* Color rojo */
+      --color-button-accent: 239, 68, 68; /* Color de botón rojo */
+      --color-button-accent-hover: 220, 50, 70; /* Color de botón al pasar el ratón */
+      --color-button-muted: 245, 245, 245; /* Color de botón atenuado */
     }
 
     [data-theme="green"] {
-      --color-text-base: 40, 40, 40;
-      --color-text-muted: 110, 110, 110;
-      --color-text-inverted: 230, 230, 230;
-      --color-fill: 236, 252, 203;
-      --muted: 189, 220, 147;
-      --color: 101, 163, 13;
-      --color-button-accent: 101, 163, 13;
-      --color-button-accent-hover: 120, 220, 120;
-      --color-button-muted: 211, 235, 173;
+      --color-text-base: 40, 40, 40; /* Texto oscuro */
+      --color-text-muted: 110, 110, 110; /* Texto atenuado */
+      --color-text-inverted: 230, 230, 230; /* Texto invertido */
+      --color-fill: 236, 252, 203; /* Fondo verde claro */
+      --muted: 189, 220, 147; /* Color atenuado */
+      --color: 101, 163, 13; /* Color verde */
+      --color-button-accent: 101, 163, 13; /* Color de botón verde */
+      --color-button-accent-hover: 120, 220, 120; /* Color de botón al pasar el ratón */
+      --color-button-muted: 211, 235, 173; /* Color de botón atenuado */
     }
 
     [data-theme="cyber"] {
-      --color-text-base: 15, 15, 15;
-      --color-text-muted: 144, 135, 5;
-      --color-text-inverted: 240, 240, 240;
-      --color-fill: 252, 255, 64;
-      --muted: 50, 50, 50;
-      --color: 235, 21, 43;
-      --color-button-accent: 235, 21, 43;
-      --color-button-accent-hover: 0, 185, 255;
-      --color-button-muted: 249, 239, 6;
-    }
-  }
-
-  /* Estilos para el modo oscuro */
-  .dark {
-    --color-text-base: 255, 255, 255;
-    --color-text-muted: 150, 150, 150;
-    --color-text-inverted: 255, 255, 255;
-    --color-fill: 18, 18, 18;
-    --muted: 36, 36, 36;
-    --color: 227, 77, 10;
-    --color-button-accent: 227, 77, 10;
-    --color-button-accent-hover: 231, 121, 43;
-    --color-button-muted: 26, 26, 26;
-
-    /* Temas en modo oscuro */
-    [data-theme="blue"] {
-      --color-text-base: 248, 250, 252;
-      --color-text-muted: 148, 163, 184;
-      --color-text-inverted: 240, 240, 240;
-      --color-fill: 2, 6, 23;
-      --muted: 51, 65, 85;
-      --color: 59, 130, 246;
-      --color-button-accent: 59, 130, 246;
-      --color-button-accent-hover: 0, 185, 255;
-      --color-button-muted: 30, 41, 59;
-    }
-
-    [data-theme="red"] {
-      --color-text-base: 231, 229, 228;
-      --color-text-muted: 168, 162, 158;
-      --color-text-inverted: 245, 245, 245;
-      --color-fill: 28, 25, 23;
-      --muted: 45, 45, 45;
-      --color: 248, 113, 113;
-      --color-button-accent: 248, 113, 113;
-      --color-button-accent-hover: 220, 50, 70;
-      --color-button-muted: 120, 113, 108; 
-    }
-
-    [data-theme="
+      --color-text-base: 15, 15, 15; /* Texto oscuro */
+      --color-text-muted: 144, 135, 5; /* Texto atenuado */
+      --color-text-inverted: 240, 240, 240; /* Texto invertido */
+      --color-fill: 252, 255, 64; /* Fondo amarillo */
+      --muted: 50, 50, 50; /* Color atenuado */
+      --color: 235, 21, 43; /* Color rojo */
+      --color-button-accent: 235, 21, 43; /* Color de botón rojo */
+      --color-button-accent-hover: 0, 185, 255; /* Color de botón al pasar el ratón
