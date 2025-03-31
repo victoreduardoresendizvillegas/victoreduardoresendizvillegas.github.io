@@ -1,73 +1,184 @@
+/* Archivo: public/css/tailwind-custom.css */
+/* Estilos adicionales que se integran con Tailwind */
+
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
+  /* Mantener tus variables de tema como estaban */
   :root {
-    /* Colores base para el tema claro */
-    --color-text-base: 0, 0, 0; /* Texto negro */
-    --color-text-muted: 120, 120, 120; /* Texto atenuado */
-    --color-text-inverted: 255, 255, 255; /* Texto invertido */
-    --color-fill: 245, 245, 245; /* Fondo claro */
-    --muted: 200, 200, 200; /* Color atenuado */
-    --color: 249, 115, 22; /* Color principal */
-    --color-button-accent: 249, 115, 22; /* Color de botón */
-    --color-button-accent-hover: 55, 55, 55; /* Color de botón al pasar el ratón */
-    --color-button-muted: 244, 239, 238; /* Color de botón atenuado */
+    --color-text-base: 0, 0, 0;
+    --color-text-muted: 120, 120, 120;
+    --color-text-inverted: 255, 255, 255;
+    --color-fill: 245, 245, 245;
+    --muted: 200, 200, 200;
+    --color: 249, 115, 22;
+    --color-button-accent: 249, 115, 22;
+    --color-button-accent-hover: 55, 55, 55;
+    --color-button-muted: 244, 239, 238;
+  }
 
-    /* Temas adicionales */
-    [data-theme="light"] {
-      --color-text-base: 0, 0, 0; /* Texto negro */
-      --color-text-muted: 150, 150, 150; /* Texto atenuado */
-      --color-text-inverted: 0, 0, 0; /* Texto invertido */
-      --color-fill: 255, 255, 255; /* Fondo blanco */
-      --muted: 220, 220, 220; /* Color atenuado */
-      --color: 0, 123, 255; /* Color azul para acentos */
-      --color-button-accent: 0, 123, 255; /* Color de botón */
-      --color-button-accent-hover: 0, 105, 217; /* Color de botón al pasar el ratón */
-      --color-button-muted: 240, 240, 240; /* Color de botón atenuado */
-    }
+  /* Mantener tus definiciones de temas existentes */
+  [data-theme="light"] {
+    --color-text-base: 0, 0, 0;
+    --color-text-muted: 150, 150, 150;
+    --color-text-inverted: 0, 0, 0;
+    --color-fill: 255, 255, 255;
+    --muted: 220, 220, 220;
+    --color: 0, 123, 255;
+    --color-button-accent: 0, 123, 255;
+    --color-button-accent-hover: 0, 105, 217;
+    --color-button-muted: 240, 240, 240;
+  }
 
-    [data-theme="blue"] {
-      --color-text-base: 15, 23, 42; /* Texto oscuro */
-      --color-text-muted: 100, 116, 139; /* Texto atenuado */
-      --color-text-inverted: 240, 240, 240; /* Texto invertido */
-      --color-fill: 203, 213, 225; /* Fondo azul claro */
-      --muted: 148, 163, 184; /* Color atenuado */
-      --color: 59, 130, 246; /* Color azul */
-      --color-button-accent: 59, 130, 246; /* Color de botón azul */
-      --color-button-accent-hover: 0, 185, 255; /* Color de botón al pasar el ratón */
-      --color-button-muted: 226, 232, 240; /* Color de botón atenuado */
-    }
+  [data-theme="blue"] {
+    --color-text-base: 15, 23, 42;
+    --color-text-muted: 100, 116, 139;
+    --color-text-inverted: 240, 240, 240;
+    --color-fill: 203, 213, 225;
+    --muted: 148, 163, 184;
+    --color: 59, 130, 246;
+    --color-button-accent: 59, 130, 246;
+    --color-button-accent-hover: 0, 185, 255;
+    --color-button-muted: 226, 232, 240;
+  }
 
-    [data-theme="red"] {
-      --color-text-base: 28, 25, 23; /* Texto oscuro */
-      --color-text-muted: 100, 100, 100; /* Texto atenuado */
-      --color-text-inverted: 245, 245, 245; /* Texto invertido */
-      --color-fill: 231, 229, 228; /* Fondo gris claro */
-      --muted: 220, 220, 220; /* Color atenuado */
-      --color: 239, 68, 68; /* Color rojo */
-      --color-button-accent: 239, 68, 68; /* Color de botón rojo */
-      --color-button-accent-hover: 220, 50, 70; /* Color de botón al pasar el ratón */
-      --color-button-muted: 245, 245, 245; /* Color de botón atenuado */
-    }
+  [data-theme="red"] {
+    --color-text-base: 28, 25, 23;
+    --color-text-muted: 100, 100, 100;
+    --color-text-inverted: 245, 245, 245;
+    --color-fill: 231, 229, 228;
+    --muted: 220, 220, 220;
+    --color: 239, 68, 68;
+    --color-button-accent: 239, 68, 68;
+    --color-button-accent-hover: 220, 50, 70;
+    --color-button-muted: 245, 245, 245;
+  }
 
-    [data-theme="green"] {
-      --color-text-base: 40, 40, 40; /* Texto oscuro */
-      --color-text-muted: 110, 110, 110; /* Texto atenuado */
-      --color-text-inverted: 230, 230, 230; /* Texto invertido */
-      --color-fill: 236, 252, 203; /* Fondo verde claro */
-      --muted: 189, 220, 147; /* Color atenuado */
-      --color: 101, 163, 13; /* Color verde */
-      --color-button-accent: 101, 163, 13; /* Color de botón verde */
-      --color-button-accent-hover: 120, 220, 120; /* Color de botón al pasar el ratón */
-      --color-button-muted: 211, 235, 173; /* Color de botón atenuado */
-    }
+  [data-theme="green"] {
+    --color-text-base: 40, 40, 40;
+    --color-text-muted: 110, 110, 110;
+    --color-text-inverted: 230, 230, 230;
+    --color-fill: 236, 252, 203;
+    --muted: 189, 220, 147;
+    --color: 101, 163, 13;
+    --color-button-accent: 101, 163, 13;
+    --color-button-accent-hover: 120, 220, 120;
+    --color-button-muted: 211, 235, 173;
+  }
 
-    [data-theme="cyber"] {
-      --color-text-base: 15, 15, 15; /* Texto oscuro */
-      --color-text-muted: 144, 135, 5; /* Texto atenuado */
-      --color-text-inverted: 240, 240, 240; /* Texto invertido */
-      --color-fill: 252, 255, 64; /* Fondo amarillo */
-      --muted: 50, 50, 50; /* Color atenuado */
-      --color: 235, 21, 43; /* Color rojo */
-      --color-button-accent: 235, 21, 43; /* Color de botón rojo */
-      --color-button-accent-hover: 0, 185, 255; /* Color de botón al pasar el ratón
+  [data-theme="cyber"] {
+    --color-text-base: 15, 15, 15;
+    --color-text-muted: 144, 135, 5;
+    --color-text-inverted: 240, 240, 240;
+    --color-fill: 252, 255, 64;
+    --muted: 50, 50, 50;
+    --color: 235, 21, 43;
+    --color-button-accent: 235, 21, 43;
+    --color-button-accent-hover: 0, 185, 255;
+    --color-button-muted: 245, 245, 245;
+  }
+  
+  /* Configuraciones base */
+  html {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(var(--color-fill));
+    color: rgb(var(--color-text-base));
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(var(--color-text-base));
+  }
+}
+
+@layer components {
+  /* Componentes personalizados compatibles con Tailwind */
+  .profile-container {
+    @apply relative overflow-hidden rounded-lg shadow-md transition-all duration-300;
+    background-color: rgb(var(--color-fill));
+    border: 2px solid rgba(var(--color), 0.2);
+  }
+  
+  .profile-image {
+    @apply w-full h-auto block object-cover transition-transform duration-300;
+  }
+  
+  .profile-container:hover .profile-image {
+    @apply transform scale-105;
+  }
+  
+  .profile-container::after {
+    content: '';
+    @apply absolute inset-0 rounded-lg pointer-events-none opacity-0 transition-opacity duration-300;
+    border: 3px solid rgb(var(--color));
+  }
+  
+  .profile-container:hover::after {
+    @apply opacity-100;
+  }
+  
+  .theme-button {
+    @apply p-2 rounded-full transition-all duration-200 cursor-pointer;
+    background-color: rgb(var(--color-button-muted));
+    color: rgb(var(--color-text-base));
+  }
+  
+  .theme-button:hover {
+    @apply transform scale-110;
+    background-color: rgb(var(--color-button-accent));
+    color: rgb(var(--color-text-inverted));
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold mb-6 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-1 w-16 rounded-full;
+    background-color: rgb(var(--color));
+    bottom: -8px;
+  }
+  
+  .about-content p {
+    @apply mb-4 leading-relaxed;
+  }
+  
+  .contact-info p {
+    @apply mb-2;
+  }
+  
+  .text-accent {
+    color: rgb(var(--color));
+    @apply font-medium;
+  }
+}
+
+@layer utilities {
+  /* Utilidades personalizadas */
+  .animate-on-scroll {
+    @apply opacity-0 transform translate-y-5 transition-all duration-500;
+  }
+  
+  .animate-on-scroll.active {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .bg-theme {
+    background-color: rgb(var(--color-fill));
+  }
+  
+  .text-theme {
+    color: rgb(var(--color-text-base));
+  }
+  
+  .text-theme-muted {
+    color: rgb(var(--color-text-muted));
+  }
+  
+  .border-theme {
+    border-color: rgb(var(--color));
+  }
+}
