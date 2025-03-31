@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Ing. Victor Eduardo Resendiz Villegas",
-    "label": "Senior Cybersecurity Solutions Engineer",
+    "label": "Senior Cybersecurity Engineer – SOC Management and Implementation",
     "image": "/me_avatar.jpg",
     "email": "victorresendizv@outlook.com",
-    "phone": "+52 55 1234 5678",
+    "phone": "+52 55 6666 7777",
     "url": "https://victorresendiz.tech",
-    "summary": "Cybersecurity professional with 8+ years of experience in designing, implementing and managing security solutions. Specialized in threat detection, risk assessment and security architecture for enterprise environments.",
+    "summary": "Cybersecurity expert with 8+ years of experience in SOC management, security automation, and advanced threat detection. Specialized in integrating disruptive technologies and predictive analysis for critical infrastructure protection.",
     "theme": "cyber",
     "location": {
       "address": "Av. Insurgentes Sur 1234",
@@ -35,189 +35,99 @@
   },
   "work": [
     {
-      "name": "SecureTech Solutions",
-      "position": "Senior Security Engineer",
+      "name": "Telefónica Tech Cyber Security & Cloud S.A. de C.V.",
+      "position": "Senior Cybersecurity Engineer",
       "location_type": "Hybrid",
       "location": "Mexico City, Mexico",
-      "url": "https://securetech.mx",
-      "startDate": "2020-03-01",
-      "endDate": null,
-      "summary": "Lead security engineer responsible for implementing enterprise security solutions and managing SOC operations.",
+      "startDate": "2021-10-01",
+      "endDate": "2023-11-01",
+      "summary": "Led advanced cybersecurity solutions for government and critical infrastructure protection.",
       "highlights": [
-        "Reduced security incidents by 65% through improved monitoring",
-        "Implemented Zero Trust architecture for 500+ employees"
-      ],
-      "responsibilities": [
-        "Design and implement security architectures for enterprise clients",
-        "Lead incident response team for critical security events",
-        "Conduct security assessments and penetration tests",
-        "Manage SIEM solutions and threat detection systems"
-      ],
-      "achievements": [
-        "Developed automated threat detection system that reduced response time by 80%",
-        "Led migration to cloud security infrastructure serving 10K+ users"
+        "Implemented security automation reducing response times by 70%"
       ],
       "skills": [
-        "SIEM",
-        "EDR",
-        "Firewalls",
-        "Zero Trust",
+        "Fortinet",
+        "Incident Response",
+        "SOC Automation",
         "Threat Intelligence"
       ]
     },
     {
-      "name": "CyberDefense Corp",
-      "position": "Security Consultant",
-      "location_type": "On-site",
-      "location": "Monterrey, Mexico",
-      "url": "https://cyberdefense.com",
-      "startDate": "2017-06-01",
-      "endDate": "2020-02-28",
-      "summary": "Security consultant providing risk assessment and security implementation services for financial institutions.",
-      "highlights": [
-        "Implemented PCI DSS compliance for 3 major banks",
-        "Developed security training program adopted company-wide"
-      ],
-      "responsibilities": [
-        "Conduct security audits and risk assessments",
-        "Design and implement security controls",
-        "Develop security policies and procedures",
-        "Provide security awareness training"
-      ],
-      "achievements": [
-        "Reduced vulnerabilities by 75% for banking clients",
-        "Created security framework adopted by 15+ financial institutions"
-      ],
-      "skills": [
-        "Risk Assessment",
-        "PCI DSS",
-        "ISO 27001",
-        "NIST Framework"
-      ]
-    },
-    {
-      "name": "National Cybersecurity Center",
-      "position": "Security Analyst",
+      "name": "Scitum S.A. de C.V.",
+      "position": "Cybersecurity Engineer",
       "location_type": "On-site",
       "location": "Mexico City, Mexico",
-      "url": "https://ncc.mx",
-      "startDate": "2015-01-01",
-      "endDate": "2017-05-31",
-      "summary": "Entry-level position monitoring and analyzing security events for government systems.",
+      "startDate": "2017-02-01",
+      "endDate": "2021-10-01",
+      "summary": "Managed cybersecurity services for major financial and government sectors.",
       "highlights": [
-        "Detected and mitigated advanced persistent threat",
-        "Improved monitoring system efficiency by 40%"
+        "Designed security frameworks adopted by multiple banking institutions"
       ],
       "skills": [
-        "SOC Operations",
-        "Incident Response",
-        "Threat Analysis"
+        "Firewall Management",
+        "Penetration Testing",
+        "Zero Trust Architecture"
       ]
     }
   ],
   "education": [
     {
-      "institution": "National Polytechnic Institute",
-      "url": "https://ipn.mx",
-      "area": "Computer Engineering",
+      "institution": "Universidad Tecnológica de Nezahualcóyotl",
+      "area": "Tecnologías de la Información y Comunicación",
       "studyType": "Bachelor's Degree",
-      "startDate": "2010-08-01",
-      "endDate": "2014-12-01",
-      "score": "9.2/10",
-      "thesis": "Secure Network Architecture Design for Enterprise Environments"
-    },
-    {
-      "institution": "Tec de Monterrey",
-      "url": "https://tec.mx",
-      "area": "Cybersecurity",
-      "studyType": "Master's Degree",
-      "startDate": "2018-01-01",
-      "endDate": "2020-06-01",
-      "score": "94/100"
+      "startDate": "2012-08-01",
+      "endDate": "2017-12-01",
+      "score": "TITULADO"
     }
   ],
   "certificates": [
     {
-      "name": "Certified Information Systems Security Professional (CISSP)",
-      "date": "2021-05-15",
-      "issuer": "(ISC)²",
-      "url": "https://www.isc2.org"
+      "name": "ISO/IEC 27001 Security Management",
+      "date": "2022-06-01",
+      "issuer": "ISO"
     },
     {
-      "name": "Certified Ethical Hacker (CEH)",
-      "date": "2019-11-01",
-      "issuer": "EC-Council",
-      "url": "https://www.eccouncil.org"
+      "name": "Cisco: Introduction to Cybersecurity",
+      "date": "2021-03-01",
+      "issuer": "Cisco"
     },
     {
-      "name": "AWS Certified Security - Specialty",
-      "date": "2022-03-01",
-      "issuer": "Amazon Web Services",
-      "url": "https://aws.amazon.com"
+      "name": "EC-Council: Network Defense Essentials (NDE)",
+      "date": "2020-12-01",
+      "issuer": "EC-Council"
+    },
+    {
+      "name": "Fortinet: Fundamentals in Cybersecurity",
+      "date": "2023-01-01",
+      "issuer": "Fortinet"
     }
   ],
   "skills": [
     {
-      "name": "Security Architecture",
+      "name": "SOC Operations",
       "level": "Expert",
       "keywords": [
-        "Zero Trust",
-        "Network Security",
-        "Cloud Security"
+        "Threat Monitoring",
+        "Incident Response",
+        "SIEM"
       ]
     },
     {
-      "name": "Threat Detection",
-      "level": "Expert",
-      "keywords": [
-        "SIEM",
-        "EDR",
-        "IDS/IPS"
-      ]
-    },
-    {
-      "name": "Incident Response",
-      "level": "Expert",
-      "keywords": [
-        "Forensics",
-        "Malware Analysis",
-        "Containment"
-      ]
-    },
-    {
-      "name": "Penetration Testing",
+      "name": "Network Security",
       "level": "Advanced",
       "keywords": [
-        "OWASP",
-        "Red Teaming",
-        "Vulnerability Assessment"
+        "Firewalls",
+        "VPN",
+        "Zero Trust"
       ]
     },
     {
-      "name": "Cloud Security",
+      "name": "Automation",
       "level": "Advanced",
       "keywords": [
-        "AWS",
-        "Azure",
-        "GCP"
-      ]
-    },
-    {
-      "name": "Python",
-      "level": "Advanced",
-      "keywords": [
-        "Automation",
-        "Security Tools",
-        "Scripting"
-      ]
-    },
-    {
-      "name": "Risk Management",
-      "level": "Expert",
-      "keywords": [
-        "NIST",
-        "ISO 27001",
-        "PCI DSS"
+        "Python",
+        "Security Scripting",
+        "SIEM Automation"
       ]
     }
   ],
@@ -228,44 +138,7 @@
     },
     {
       "language": "English",
-      "fluency": "Professional"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Enterprise Threat Detection Framework",
-      "isActive": true,
-      "description": "Custom framework for detecting advanced threats across enterprise networks.",
-      "highlights": [
-        "Reduced detection time from days to minutes",
-        "Integrated with major SIEM platforms"
-      ],
-      "technologies": ["Python", "Elasticsearch", "Sigma Rules"]
-    },
-    {
-      "name": "Cloud Security Automation",
-      "isActive": true,
-      "description": "Automated security controls for multi-cloud environments.",
-      "highlights": [
-        "Reduced misconfigurations by 90%",
-        "Implemented across 3 cloud providers"
-      ],
-      "technologies": ["Terraform", "AWS", "Azure Policy"]
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zero Trust Implementation Patterns",
-      "publisher": "Security Journal",
-      "releaseDate": "2022-09-01",
-      "url": "https://securityjournal.com/zero-trust-patterns"
-    }
-  ],
-  "awards": [
-    {
-      "title": "Top Security Professional",
-      "date": "2022-11-01",
-      "awarder": "Mexican Cybersecurity Association"
+      "fluency": "Professional (B2)"
     }
   ]
 }
