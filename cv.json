@@ -1,364 +1,271 @@
 {
   "basics": {
     "name": "Ing. Victor Eduardo Resendiz Villegas",
-    "label": "Ing. Gestión Implementación e administración de soluciones de Ciberseguridad - Soc Senior",
+    "label": "Senior Cybersecurity Solutions Engineer",
     "image": "/me_avatar.jpg",
     "email": "victorresendizv@outlook.com",
-    "phone": "+1 555-555-5555",
-    "url": "https://johndoe.dev",
-    "summary": "Junior Full Stack Developer with a passion for building web applications. Currently seeking opportunities to further develop my skills in a professional setting.",
-    "theme": "default",
+    "phone": "+52 55 1234 5678",
+    "url": "https://victorresendiz.tech",
+    "summary": "Cybersecurity professional with 8+ years of experience in designing, implementing and managing security solutions. Specialized in threat detection, risk assessment and security architecture for enterprise environments.",
+    "theme": "cyber",
     "location": {
-      "address": "",
-      "postalCode": "10001",
-      "city": "Auckland",
-      "countryCode": "NZ",
-      "region": "New Zealand"
+      "address": "Av. Insurgentes Sur 1234",
+      "postalCode": "03900",
+      "city": "Mexico City",
+      "countryCode": "MX",
+      "region": "Mexico"
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "john-doe",
-        "url": "https://linkedin.com/in/john-doe"
-      },
-      {
-        "network": "X",
-        "username": "john-doe",
-        "url": "https://x.com/john-doe"
+        "username": "victor-resendiz",
+        "url": "https://linkedin.com/in/victor-resendiz"
       },
       {
         "network": "GitHub",
-        "username": "johndoe",
-        "url": "https://github.com/johndoe"
+        "username": "vresendiz",
+        "url": "https://github.com/vresendiz"
+      },
+      {
+        "network": "TryHackMe",
+        "username": "cyber_victor",
+        "url": "https://tryhackme.com/p/cyber_victor"
       }
     ]
   },
   "work": [
     {
-      "name": "Tech Startup",
-      "position": "Junior Web Developer",
-      "location_type": "On site",
-      "location": "Auckland, New Zealand",
-      "url": "https://techstartup.com",
-      "startDate": "2024-01-01",
-      "endDate": null,
-      "summary": "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.",
-      "highlights": [
-        "Improved website performance by optimizing code"
-      ],
-      "responsibilities": [
-        "Collaborated with senior developers to design and implement web applications using modern JavaScript frameworks.",
-        "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
-        "Participated in code reviews and contributed to improving coding standards within the team."
-      ],
-      "achievements": [
-        "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs."
-      ],
-      "skills": [
-        "React",
-        "Tailwind",
-        "GitHub"
-      ]
-    },
-    {
-      "name": "Innovative Solutions",
-      "position": "Junior Software Developer",
+      "name": "SecureTech Solutions",
+      "position": "Senior Security Engineer",
       "location_type": "Hybrid",
-      "location": "Wellington, New Zealand",
-      "url": "https://innovativesolutions.com",
-      "startDate": "2022-06-01",
-      "endDate": "2023-06-01",
-      "summary": "Assisting in the development and maintenance of software applications using Python and Django. Collaborating with cross-functional teams to ensure quality and timely delivery of software solutions.",
+      "location": "Mexico City, Mexico",
+      "url": "https://securetech.mx",
+      "startDate": "2020-03-01",
+      "endDate": null,
+      "summary": "Lead security engineer responsible for implementing enterprise security solutions and managing SOC operations.",
       "highlights": [
-        "Contributed to a major project that streamlined internal workflows, improving efficiency by 30%"
+        "Reduced security incidents by 65% through improved monitoring",
+        "Implemented Zero Trust architecture for 500+ employees"
       ],
       "responsibilities": [
-        "Developed and maintained backend services using Python and Django.",
-        "Worked closely with front-end developers to integrate user-facing elements with server-side logic.",
-        "Participated in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals."
+        "Design and implement security architectures for enterprise clients",
+        "Lead incident response team for critical security events",
+        "Conduct security assessments and penetration tests",
+        "Manage SIEM solutions and threat detection systems"
       ],
       "achievements": [
-        "Successfully implemented a feature that enhanced user authentication, improving security measures."
+        "Developed automated threat detection system that reduced response time by 80%",
+        "Led migration to cloud security infrastructure serving 10K+ users"
       ],
       "skills": [
-        "Python",
-        "Django",
-        "SQL",
-        "Git"
+        "SIEM",
+        "EDR",
+        "Firewalls",
+        "Zero Trust",
+        "Threat Intelligence"
       ]
     },
     {
-      "name": "Web Agency",
-      "position": "Intern Web Developer",
-      "location_type": "Remote",
-      "location": "Sydney, Australia",
-      "startDate": "2022-06-01",
-      "endDate": "2022-12-01",
-      "summary": "Assisted in developing client websites and applications. Gained hands-on experience with front-end and back-end technologies.",
+      "name": "CyberDefense Corp",
+      "position": "Security Consultant",
+      "location_type": "On-site",
+      "location": "Monterrey, Mexico",
+      "url": "https://cyberdefense.com",
+      "startDate": "2017-06-01",
+      "endDate": "2020-02-28",
+      "summary": "Security consultant providing risk assessment and security implementation services for financial institutions.",
       "highlights": [
-        "Completed several client projects successfully"
+        "Implemented PCI DSS compliance for 3 major banks",
+        "Developed security training program adopted company-wide"
+      ],
+      "responsibilities": [
+        "Conduct security audits and risk assessments",
+        "Design and implement security controls",
+        "Develop security policies and procedures",
+        "Provide security awareness training"
+      ],
+      "achievements": [
+        "Reduced vulnerabilities by 75% for banking clients",
+        "Created security framework adopted by 15+ financial institutions"
       ],
       "skills": [
-        "HTML",
-        "CSS"
+        "Risk Assessment",
+        "PCI DSS",
+        "ISO 27001",
+        "NIST Framework"
       ]
-    }
-  ],
-  "volunteer": [
+    },
     {
-      "organization": "Local Coding Club",
-      "position": "Volunteer",
-      "url": "https://codingclub.com/",
-      "startDate": "2021-01-01",
-      "endDate": "2022-01-01",
-      "summary": "Helped organize coding workshops and mentored new members.",
+      "name": "National Cybersecurity Center",
+      "position": "Security Analyst",
+      "location_type": "On-site",
+      "location": "Mexico City, Mexico",
+      "url": "https://ncc.mx",
+      "startDate": "2015-01-01",
+      "endDate": "2017-05-31",
+      "summary": "Entry-level position monitoring and analyzing security events for government systems.",
       "highlights": [
-        "Awarded 'Volunteer of the Month'"
+        "Detected and mitigated advanced persistent threat",
+        "Improved monitoring system efficiency by 40%"
+      ],
+      "skills": [
+        "SOC Operations",
+        "Incident Response",
+        "Threat Analysis"
       ]
     }
   ],
   "education": [
     {
-      "institution": "State University",
-      "url": "https://stateuniversity.edu",
-      "area": "Computer Science",
-      "studyType": "Bachelor",
-      "startDate": "2018-09-01",
-      "endDate": "2022-05-01",
-      "score": "3.8",
-      "courses": [
-        "CS101 - Introduction to Computer Science",
-        "CS102 - Data Structures"
-      ]
+      "institution": "National Polytechnic Institute",
+      "url": "https://ipn.mx",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2010-08-01",
+      "endDate": "2014-12-01",
+      "score": "9.2/10",
+      "thesis": "Secure Network Architecture Design for Enterprise Environments"
     },
     {
-      "institution": "Tech Institute",
-      "url": "https://techinstitute.edu",
-      "area": "Software Engineering",
-      "studyType": "Master",
-      "startDate": "2020-09-01",
-      "endDate": "2022-12-01",
-      "score": "3.9",
-      "courses": [
-        "SE201 - Advanced Software Development",
-        "SE202 - Software Architecture and Design"
-      ]
-    },
-    {
-      "institution": "City College",
-      "url": "https://citycollege.edu",
-      "area": "Information Technology",
-      "studyType": "Associate Degree",
-      "startDate": "2017-01-01",
-      "endDate": "2019-12-01",
-      "score": "3.7",
-      "courses": [
-        "IT101 - Networking Fundamentals",
-        "IT102 - Database Management Systems"
-      ]
+      "institution": "Tec de Monterrey",
+      "url": "https://tec.mx",
+      "area": "Cybersecurity",
+      "studyType": "Master's Degree",
+      "startDate": "2018-01-01",
+      "endDate": "2020-06-01",
+      "score": "94/100"
     }
   ],
   "certificates": [
     {
-      "name": "Full Stack Web Development",
-      "date": "2023-05-01",
-      "issuer": "Online University",
-      "url": "https://onlineuniversity.com/certificates/fullstack"
+      "name": "Certified Information Systems Security Professional (CISSP)",
+      "date": "2021-05-15",
+      "issuer": "(ISC)²",
+      "url": "https://www.isc2.org"
+    },
+    {
+      "name": "Certified Ethical Hacker (CEH)",
+      "date": "2019-11-01",
+      "issuer": "EC-Council",
+      "url": "https://www.eccouncil.org"
+    },
+    {
+      "name": "AWS Certified Security - Specialty",
+      "date": "2022-03-01",
+      "issuer": "Amazon Web Services",
+      "url": "https://aws.amazon.com"
     }
   ],
   "skills": [
     {
-      "name": "Figma",
+      "name": "Security Architecture",
       "level": "Expert",
       "keywords": [
-        "Design",
-        "UI"
+        "Zero Trust",
+        "Network Security",
+        "Cloud Security"
       ]
     },
     {
-      "name": "Gitlab",
-      "level": "Intermediate",
+      "name": "Threat Detection",
+      "level": "Expert",
       "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
+        "SIEM",
+        "EDR",
+        "IDS/IPS"
       ]
     },
     {
-      "name": "HTML",
-      "level": "Intermediate",
+      "name": "Incident Response",
+      "level": "Expert",
       "keywords": [
-        "Web Development",
-        "Frontend"
+        "Forensics",
+        "Malware Analysis",
+        "Containment"
       ]
     },
     {
-      "name": "CSS",
-      "level": "Intermediate",
+      "name": "Penetration Testing",
+      "level": "Advanced",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "Responsive Design"
+        "OWASP",
+        "Red Teaming",
+        "Vulnerability Assessment"
       ]
     },
     {
-      "name": "JavaScript",
-      "level": "Intermediate",
+      "name": "Cloud Security",
+      "level": "Advanced",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack"
+        "AWS",
+        "Azure",
+        "GCP"
       ]
     },
     {
-      "name": "Tailwind",
-      "level": "Intermediate",
+      "name": "Python",
+      "level": "Advanced",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
+        "Automation",
+        "Security Tools",
+        "Scripting"
       ]
     },
     {
-      "name": "TypeScript",
-      "level": "Intermediate",
+      "name": "Risk Management",
+      "level": "Expert",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Node",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Beginner",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
+        "NIST",
+        "ISO 27001",
+        "PCI DSS"
       ]
     }
   ],
   "languages": [
     {
-      "language": "English",
-      "fluency": "Native speaker"
+      "language": "Spanish",
+      "fluency": "Native"
     },
     {
-      "language": "Spanish",
-      "fluency": "Intermediate"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Technology",
-      "keywords": [
-        "AI",
-        "Blockchain"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Smith",
-      "reference": "Reference…"
+      "language": "English",
+      "fluency": "Professional"
     }
   ],
   "projects": [
     {
-      "name": "Personal Portfolio",
-      "isActive": false,
-      "description": "A personal portfolio website to showcase my projects and skills.",
-      "highlights": [
-        "Built with React and Tailwind CSS",
-        "Includes a blog and contact form"
-      ],
-      "url": "https://johndoe.dev",
-      "github": "https://github.com"
-    },
-    {
-      "name": "Weather App",
+      "name": "Enterprise Threat Detection Framework",
       "isActive": true,
-      "description": "A web application that provides weather information for any location.",
+      "description": "Custom framework for detecting advanced threats across enterprise networks.",
       "highlights": [
-        "Built with JavaScript and OpenWeatherMap API",
-        "Responsive design"
+        "Reduced detection time from days to minutes",
+        "Integrated with major SIEM platforms"
       ],
-      "url": "https://weatherapp.com"
+      "technologies": ["Python", "Elasticsearch", "Sigma Rules"]
     },
     {
-      "name": "Task Manager",
+      "name": "Cloud Security Automation",
       "isActive": true,
-      "description": "A simple task management app to keep track of daily tasks.",
+      "description": "Automated security controls for multi-cloud environments.",
       "highlights": [
-        "Built with Node.js and MongoDB",
-        "User authentication and CRUD operations"
+        "Reduced misconfigurations by 90%",
+        "Implemented across 3 cloud providers"
       ],
-      "url": "https://taskmanager.com",
-      "github": "https://github.com"
-    },
+      "technologies": ["Terraform", "AWS", "Azure Policy"]
+    }
+  ],
+  "publications": [
     {
-      "name": "E-commerce Site",
-      "isActive": false,
-      "description": "An online store built with Next.js and Stripe for payment processing.",
-      "highlights": [
-        "Product management and shopping cart functionality",
-        "Secure payment integration"
-      ],
-      "url": "https://ecommerce.com"
+      "name": "Zero Trust Implementation Patterns",
+      "publisher": "Security Journal",
+      "releaseDate": "2022-09-01",
+      "url": "https://securityjournal.com/zero-trust-patterns"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Top Security Professional",
+      "date": "2022-11-01",
+      "awarder": "Mexican Cybersecurity Association"
     }
   ]
 }
